@@ -62,3 +62,48 @@ COPY bikeshare_06_24_to_05_25 FROM 'C:\Users\Public\Documents\Trip Data for Bike
 ```
 
 This was difficult at first because I wasn't aware that PostgreSQL (and many data management systems) require the user to create an empty table before uploading the actual contents from eg. a .csv file. The SQL code here includes the basic DROP TABLE IF EXISTS and CREATE TABLE statements with my desired table name, and then I manually generate the schema by defining the column names with their corresponding datatypes, and then a character limit, which I believe is to prevent broken/super long fields from being uploaded. I had to navigate some issues with file editing permissions on my computer, but the table was created and populated fairly easily after the SQL was written.
+
+I then began querying the data, first to make sure it was clean, which it very much was, and then to gather some information about how many unique entries existed for various dimensions, or qualitative data columns. I found that a simple query featuring a GROUP BY statment was a good approach here:
+
+For the cohorts- there are 2 possible values here, plus the number of observations for each:
+```
+--determine number of rides for each main cohort.
+SELECT
+	member_casual,
+	COUNT(*) AS num_rides
+FROM
+	bikeshare_06_24_to_05_25
+
+GROUP BY member_casual
+```
+Output:
+|member_casual|num_rides|
+|:--------|:-------:|
+|casual |	2112667 |
+|member	| 3623217 |
+
+And for the equipment being ridden, we have 3 possible values:
+```
+--determine number of rides for each option for ride types.
+SELECT
+	rideable_type,
+	COUNT(*) AS num_rides
+FROM
+	bikeshare_06_24_to_05_25
+
+GROUP BY rideable_type
+```
+Output:
+|rideable_type|num_rides|
+|:------------|----------:|
+|classic_bike |	2533829 |
+|electric_bike |	3057718 |
+|electric_scooter	| 144337 |
+
+After running a few other similar queries, I tried to determine what quantitative variables, or measurements, could be found in this table. After a bit of thought, and some trial and error, I settled on three:
+
+-**Number of rides**: calculated through the COUNT function
+
+-**Trip Duration**: calculated by subtracting the start date/time from the end date/time. I learned through a few hiccups that I had to cast the INTERVAL datatype in order to use it in aggregated functions, and in Tableau
+
+-**Absolute Distance Traveled**: calculated through a simple trigonometric formula using the coordinates that the rider started and ended at (the starting and ending stations). It is "as the crow flies".
