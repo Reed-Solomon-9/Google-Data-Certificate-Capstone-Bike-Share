@@ -1,2 +1,64 @@
-# Google-Data-Certificate-Capstone-Bike-Share
+## Google-Data-Certificate-Capstone-Bike-Share
 I am completing the capstone project for the Google Data Analytics Certificate. SQL code chunks and visualizations from Tableau will be included.
+
+---
+
+
+This is my capstone project for the Google Data Analytics Certificate. I completed the instruction for the certificate program in early June of 2025. The certificate contains a very broad look at the entire workflow of a data analyst, including data cleaning, transformation, analysis, visualization, and more. It features instruction on using spreadsheets, SQL, Tableau, and R. 
+
+For the course, I took a detailed and exhaustive approach to learning- I did not believe there is any sense in saying I've learned something if I don't actually understand it. The quizzes and examinations in the GDAC are quite easy, but the quality of the instruction is solid. It also features hundreds of links to other sources of knowledge- nearly all of which I read, in many cases multiple times in order to understand concepts that were completely new to me.
+
+I took a similar approach to the capstone analysis project. My primary goal for this project was to use SQL and Tableau in enough different ways, and with enough complexity, that I felt fully prepared to use those tools in a professional setting. 
+
+If I were looking at software and data projects that people posted online, I'd like to know how they incorporate AI, so I will include how I used AI tools in this project. 
+Generally, I used AI, specifically ChatGPT and Google Gemini Pro, as a **personal tutor**. Google's certificate course taught me the basics of tools like SQL and Business Intelligence software, but in many lessons I wanted to go much further that what was covered in the course, and AI was able to quickly find useful information. As I became more comfortable in the world of computer science, I would also incorporate Stack Overflow and other more traditional resources. The goal was always to improve my understanding, and I used AI to that end, while stubbornly making sure that I actually completed all my work by myself. When I was in school, I thrived when given the opportunity to ask questions- and AI gives a level of feedback that can only be found through tiny class sizes and 1-on-1 tutoring.
+
+Amusingly, while working with AI to solve a few challenging problems, I actually found myself answering the questions that the AI model couldn't figure out, and I would politely educate it about where it went wrong.
+
+### The project itself
+
+Google provides a number of options for how to complete the capstone project. I chose the bike share company analysis _"Case Study 1: How does a bike-share navigate speedy success?"_ because it appeared to have a large, clean, and complete dataset associated with it. The project asks the analyst to determine the differences in behavior between casual riders and subscription members who use the bike share service, and it allows the analyst to determine what information can be gleaned from the data, and what might be useful from a business perspective. 
+
+The first step was to actually load the data- and this was an extremely useful, though at times frustrating exercise. The project calls for one year's worth of data about bike trips in Chicago, and the data was organized by month on the source website (source: https://divvy-tripdata.s3.amazonaws.com/index.html). One year of data from June of 2024 through May of 2025 made up over 5.7 million combined observations and about 1.17GB - and even the individual monthly tables were too large to easily preview in either a spreadsheet or RStudio. It was also too large for me to use in the free sandbox version of Google BigQuery that I had been using to learn SQL. 
+
+I'd heard a lot about PostgreSQL and I decided to download it. It was easy to install, although I had a difficult time at first with the graphical user interface. But the query tool made sense to me as it was just a SQL coding environment. I ran a few commands to create a table- I asked Google Gemini about the appropriate syntax for this as it was not covered in the certificate course. I also checked Gemini's work by reading about table creation on the w3schools website. 
+
+
+```
+--Delete mistake version of table; create table with columns and character limits specified. 
+
+DROP TABLE IF EXISTS bikeshare_06_24_to_05_25;
+CREATE TABLE bikeshare_06_24_to_05_25 (
+ ride_id VARCHAR(50),
+ rideable_type VARCHAR(50),
+ started_at TIMESTAMP,
+ ended_at TIMESTAMP,
+ start_station_name VARCHAR(100),
+ start_station_id VARCHAR(50),
+ end_station_name VARCHAR(100),
+ end_station_id VARCHAR(50),
+ start_lat DOUBLE PRECISION CHECK (start_lat >= -90.0 AND start_lat <= 90.0),  --check on whether location exists
+ start_lng DOUBLE PRECISION CHECK (start_lng >= -180.0 AND start_lng <= 180.0),
+ end_lat DOUBLE PRECISION CHECK (end_lat >= -90.0 AND end_lat <= 90.0),  
+ end_lng DOUBLE PRECISION CHECK (end_lng >= -180.0 AND end_lng <= 180.0),
+ member_casual VARCHAR(50) 
+);
+
+
+--Populate table with downloaded dataset on hard drive. 12 months combined into one table.
+
+COPY bikeshare_06_24_to_05_25 FROM 'C:\Users\Public\Documents\Trip Data for Bike Share Case Study\202405-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+COPY bikeshare_06_24_to_05_25 FROM 'C:\Users\Public\Documents\Trip Data for Bike Share Case Study\202406-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+COPY bikeshare_06_24_to_05_25 FROM 'C:\Users\Public\Documents\Trip Data for Bike Share Case Study\202407-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+COPY bikeshare_06_24_to_05_25 FROM 'C:\Users\Public\Documents\Trip Data for Bike Share Case Study\202408-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+COPY bikeshare_06_24_to_05_25 FROM 'C:\Users\Public\Documents\Trip Data for Bike Share Case Study\202409-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+COPY bikeshare_06_24_to_05_25 FROM 'C:\Users\Public\Documents\Trip Data for Bike Share Case Study\202410-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+COPY bikeshare_06_24_to_05_25 FROM 'C:\Users\Public\Documents\Trip Data for Bike Share Case Study\202411-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+COPY bikeshare_06_24_to_05_25 FROM 'C:\Users\Public\Documents\Trip Data for Bike Share Case Study\202412-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+COPY bikeshare_06_24_to_05_25 FROM 'C:\Users\Public\Documents\Trip Data for Bike Share Case Study\202501-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+COPY bikeshare_06_24_to_05_25 FROM 'C:\Users\Public\Documents\Trip Data for Bike Share Case Study\202502-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+COPY bikeshare_06_24_to_05_25 FROM 'C:\Users\Public\Documents\Trip Data for Bike Share Case Study\202503-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+COPY bikeshare_06_24_to_05_25 FROM 'C:\Users\Public\Documents\Trip Data for Bike Share Case Study\202504-divvy-tripdata.csv' DELIMITER ',' CSV HEADER;
+```
+
+This was difficult at first because I wasn't aware that PostgreSQL (and many data management systems) require the user to create an empty table before uploading the actual contents from eg. a .csv file. The SQL code here includes the basic DROP TABLE IF EXISTS and CREATE TABLE statements with my desired table name, and then I manually generate the schema by defining the column names with their corresponding datatypes, and then a character limit, which I believe is to prevent broken/super long fields from being uploaded. I had to navigate some issues with file editing permissions on my computer, but the table was created and populated fairly easily after the SQL was written.
