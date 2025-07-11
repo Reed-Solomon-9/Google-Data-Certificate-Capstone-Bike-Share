@@ -11,7 +11,7 @@ For the course, I took a detailed and exhaustive approach to learning- I did not
 I took a similar approach to the capstone analysis project. My primary goal for this project was to use SQL and Tableau in enough different ways, and with enough complexity, that I felt fully prepared to use those tools in a professional setting. 
 
 If I were looking at software and data projects that people posted online, I'd like to know how they incorporate AI, so I will include how I used AI tools in this project. 
-Generally, I used AI, specifically ChatGPT and Google Gemini Pro, as a **personal tutor**. Google's certificate course taught me the basics of tools like SQL and Business Intelligence software, but in many lessons I wanted to go much further that what was covered in the course, and AI was able to quickly find useful information. As I became more comfortable in the world of computer science, I would also incorporate Stack Overflow and other more traditional resources. The goal was always to improve my understanding, and I used AI to that end, while stubbornly making sure that I actually completed all my work by myself. When I was in school, I thrived when given the opportunity to ask questions- and AI gives a level of feedback that can only be found through tiny class sizes and 1-on-1 tutoring.
+Generally, I used AI, specifically ChatGPT and Google Gemini Pro, as a **personal tutor**. Google's certificate course taught me the basics of tools like SQL and Business Intelligence software, but in many lessons I wanted to go much further that what was covered in the course, and AI was able to quickly find useful information. As I became more comfortable in the world of computer science, I would also incorporate Stack Overflow and other more traditional resources. The goal was always to improve my understanding, and I used AI to that end, while stubbornly making sure that I actually completed all my work by myself. Back when I was in school, I thrived when given the opportunity to ask questions- and AI gives a level of feedback that can only be found through tiny class sizes and 1-on-1 tutoring.
 
 Amusingly, while working with AI to solve a few challenging problems, I actually found myself answering the questions that the AI model couldn't figure out, and I would politely educate it about where it went wrong.
 
@@ -63,7 +63,7 @@ COPY bikeshare_06_24_to_05_25 FROM 'C:\Users\Public\Documents\Trip Data for Bike
 
 This was difficult at first because I wasn't aware that PostgreSQL (and many data management systems) require the user to create an empty table before uploading the actual contents from eg. a .csv file. The SQL code here includes the basic DROP TABLE IF EXISTS and CREATE TABLE statements with my desired table name, and then I manually generate the schema by defining the column names with their corresponding datatypes, and then a character limit, which I believe is to prevent broken/super long fields from being uploaded. I had to navigate some issues with file editing permissions on my computer, but the table was created and populated fairly easily after the SQL was written.
 
-I then began querying the data, first to make sure it was clean, which it very much was, and then to gather some information about how many unique entries existed for various dimensions, or qualitative data columns. I found that a simple query featuring a GROUP BY statment was a good approach here:
+I then began querying the data, first to make sure it was clean, which it very much was, and then to gather some information about how many unique entries existed for various dimensions, or qualitative data columns. I found that a simple query featuring a GROUP BY statment was a good approach here.
 
 For the cohorts- there are 2 possible values here, plus the number of observations for each:
 ```
@@ -102,8 +102,27 @@ Output:
 
 After running a few other similar queries, I tried to determine what quantitative variables, or measurements, could be found in this table. After a bit of thought, and some trial and error, I settled on three:
 
--**Number of rides**: calculated through the COUNT function
+-**Number of rides**: calculated through the COUNT function.
 
--**Trip Duration**: calculated by subtracting the start date/time from the end date/time. I learned through a few hiccups that I had to cast the INTERVAL datatype in order to use it in aggregated functions, and in Tableau
+-**Trip Duration**: calculated by subtracting the start date/time from the end date/time. I learned through a few hiccups that I had to cast the INTERVAL datatype that was created by subtracting those timestamps to an EPOCH special date/time input (number of seconds since the beginning of the year 1970) in order for the resulting column to be a numeric datatype.
 
 -**Absolute Distance Traveled**: calculated through a simple trigonometric formula using the coordinates that the rider started and ended at (the starting and ending stations). It is "as the crow flies".
+
+These measurements could be used in any grouping of the data, so it was important to establish them first. It took some trial and error- I needed to fully wrap my head around grouping logic, most fundamentally how it features qualitative dimensions that are consolidated into single rows, and then these qualitative measures that are aggregated in some way with SUM, COUNT, AVG, and other functions. I explored the data by running a few queries where I grouped by month and day of week with just the number of rides before I thought to use other measurements.
+
+After that came the dimensions. The project summary from Google suggested using day of week, and it seemed to follow logically that I could also derive month from the timestamps, plus the data was organized by month. I also organized by the ride type. 
+At this point, I had:
+
+**Dimensions: member/casual (primary cohorts being compared), ride type, day of week, and month.**
+
+**Measures: number of rides, trip duration, and distance traveled.**
+
+Tableau Public Desktop would not accept a 5.7 million row table, so I did the aggregation in PostgreSQL first and used seperate grouped tables for my visualizations. 
+I made a dozen charts that looked like this:
+
+<img width="648" height="704" alt="Duration by Week or Month and Ridetype" src="https://github.com/user-attachments/assets/f6e8ad27-190a-45af-b231-7f13e8680570" />
+
+and determined a few basic insights about rider behavior. The only clear pattern that emerged between casual riders and members was that they took more trips in opposite parts of the week: 
+Members took relatively more trips on Monday through Friday, and casual riders took more trips on weekends.
+
+
