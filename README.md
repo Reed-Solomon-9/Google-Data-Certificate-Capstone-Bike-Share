@@ -125,4 +125,25 @@ I made a dozen charts that looked like this:
 and determined a few basic insights about rider behavior. The only clear pattern that emerged between casual riders and members was that they took more trips in opposite parts of the week: 
 Members took relatively more trips on Monday through Friday, and casual riders took more trips on weekends.
 
+I found this unsatisfying, and wanted to do something more interesting with the tools I've learned. I came up with the idea to derive the direction traveled for each ride using the starting and ending coordinates.
+I used this calculated field in my SELECT statement in SQL:
+```
+SELECT *,
+	CASE WHEN (end_lat-start_lat) > 0 AND (end_lat-start_lat) >= (ABS(end_lng-start_lng) * 2.414213562) THEN 'North'
+	WHEN (end_lat-start_lat) < 0 AND (start_lat-end_lat) >= (ABS(end_lng-start_lng) * 2.414213562) THEN 'South'
+	WHEN (end_lng-start_lng) > 0 AND (end_lng-start_lng) >= (ABS(end_lat-start_lat) * 2.414213562) THEN 'East'
+	WHEN (end_lng-start_lng) < 0 AND (start_lng-end_lng) >= (ABS(end_lat-start_lat) * 2.414213562) THEN 'West'
+	WHEN (end_lat-start_lat) > 0 AND (end_lng-start_lng) > 0 AND (end_lat-start_lat) < (ABS(end_lng-start_lng) * 2.414213562) AND (end_lng-start_lng) < (ABS(end_lat-start_lat)*2.414213562) THEN 'Northeast'
+	WHEN (end_lat-start_lat) > 0 AND (end_lng-start_lng) < 0 AND (end_lat-start_lat) < (ABS(end_lng-start_lng) * 2.414213562) AND (start_lng-end_lng) < (ABS(end_lat-start_lat)*2.414213562) THEN 'Northwest'
+	WHEN (end_lat-start_lat) < 0 AND (end_lng-start_lng) > 0 AND (start_lat-end_lat) < (ABS(end_lng-start_lng) * 2.414213562) AND (end_lng-start_lng) < (ABS(end_lat-start_lat)*2.414213562) THEN 'Southeast'
+	WHEN (end_lat-start_lat) < 0 AND (end_lng-start_lng) < 0 AND (start_lat-end_lat) < (ABS(end_lng-start_lng) * 2.414213562) AND (start_lng-end_lng) < (ABS(end_lat-start_lat)*2.414213562) THEN 'Southwest'
+	ELSE 'None' END AS trip_direction
+```
+I originally set the ratio between the directions to 2 just to make the query work, then later I looked up some basic trigonometry and came up with 1 + square root of 2.
+The directions dimension didn't lend a huge amount of insight. Both members and casual riders took longer trips traveling north and south as opposed to east and west, but that likely has to do with the geography of Chicago. 
+
+Thinking about Chicago's geography gave me an idea, and that was to look at the locations where the riders started their rides from and try to categorize them somehow. I went to the City of Chicago website and found a table that contained the geometry of all the city's neighborhoods. I figured I'd overlay the start station coordinates over this, but Tableau wouldn't accept the two tables without connecting them.
+This is where things got difficult, and I started asking Gemini AI questions about how to connect these data tables. It suggested a "spatial join" which can be used in PostgreSQL after downloading its GIS (Geographic Information System) extension. 
+After a tremendous amount of trial and error, over a hundred pages of instructions from Gemini, and a fair amount of frustration I was able to load a summary table with my three measurements joined to the map of Chicago neighborhoods into Tableau by way of QGIS software. 
+
 
