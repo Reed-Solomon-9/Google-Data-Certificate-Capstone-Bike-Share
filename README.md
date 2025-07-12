@@ -142,8 +142,16 @@ SELECT *,
 I originally set the ratio between the directions to 2 just to make the query work, then later I looked up some basic trigonometry and came up with 1 + square root of 2.
 The directions dimension didn't lend a huge amount of insight. Both members and casual riders took longer trips traveling north and south as opposed to east and west, but that likely has to do with the geography of Chicago. 
 
-Thinking about Chicago's geography gave me an idea, and that was to look at the locations where the riders started their rides from and try to categorize them somehow. I went to the City of Chicago website and found a table that contained the geometry of all the city's neighborhoods. I figured I'd overlay the start station coordinates over this, but Tableau wouldn't accept the two tables without connecting them.
+Thinking about Chicago's geography gave me an idea, and that was to look at the locations where the riders started their rides from and try to categorize them somehow. I went to the City of Chicago website and found a table that contained the geometry of all the city's neighborhoods (source: https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Neighborhoods/bbvz-uum9). I figured I'd overlay the start station coordinates over this, but Tableau wouldn't accept the two tables without connecting them.
 This is where things got difficult, and I started asking Gemini AI questions about how to connect these data tables. It suggested a "spatial join" which can be used in PostgreSQL after downloading its GIS (Geographic Information System) extension. 
 After a tremendous amount of trial and error, over a hundred pages of instructions from Gemini, and a fair amount of frustration I was able to load a summary table with my three measurements joined to the map of Chicago neighborhoods into Tableau by way of QGIS software. 
+
+<img width="479" height="850" alt="Chicago Neighborhoods by casual rider percentage" src="https://github.com/user-attachments/assets/d58e0507-4380-4f6f-a96b-f7692cd8d5cc" />
+
+I added a calculated field to show how much the percentage of casual riders varies by neighborhood. This turned out to be, in my opinion, the most insightful way to use this dataset.
+
+The next step was to organize all the ways that I had looked at the data, and record which relationships contained insight. I made a big spreadsheet with my three measures, plus all six dimensions used to organize the data (I ran a query for time of day as well, realizing I'd forgotten that). Lots of words here but this helped to guide me closer to my conclusions.
+
+<img width="1621" height="627" alt="Useful Relationships for Bike Share dataset" src="https://github.com/user-attachments/assets/9fc39271-41fa-4c0b-a049-d9e268ed7310" />
 
 
