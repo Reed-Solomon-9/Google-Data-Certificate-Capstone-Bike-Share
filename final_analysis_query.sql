@@ -1,4 +1,4 @@
-CREATE TABLE final_analysis_measures_by_doy_tod_ridetype_neighborhood AS
+CREATE TABLE final_analysis_measures_by_doy_tod_ridetype_neighborhood_v2 AS
 WITH JoinedAndCalculated AS(
 WITH WithCalculatedFields AS (
 	SELECT *,
@@ -74,26 +74,30 @@ WHERE absolute_distance_miles > 0
 --End of double CTE, start of aggregation
 SELECT
 		--dimensions
-	member_casual,
-	rideable_type,
-	primary_neigh,
-	weekday,
-	weekday_num,
-	hour,
-	the_geom,
+	t1.member_casual,
+	t1.rideable_type,
+	t1.primary_neigh,
+	t1.weekday,
+	t1.weekday_num,
+	t1.hour,
+	t1.the_geom,
 		--measures
 	COUNT(*) AS num_rides,
-	ROUND(AVG(absolute_distance_miles), 2) AS absolute_distance_miles,
-	ROUND(AVG(trip_duration_minutes), 2) AS trip_duration_minutes
+	ROUND(AVG(t1.absolute_distance_miles), 2) AS absolute_distance_miles,
+	ROUND(AVG(t1.trip_duration_minutes), 2) AS trip_duration_minutes,
+	t2.neigh_category
 	
 
 
 FROM
-	JoinedAndCalculated
+	JoinedAndCalculated AS t1
 
-GROUP BY member_casual, primary_neigh, 
-rideable_type,
-weekday, weekday_num, hour,
-the_geom
+INNER JOIN	
+	neighborhood_categories AS t2 ON t1.primary_neigh = t2.primary_neigh
 
-ORDER BY member_casual, weekday_num, hour, COUNT(*)
+GROUP BY t1.member_casual, t1.primary_neigh, t2.neigh_category,
+t1.rideable_type,
+t1.weekday, t1.weekday_num, t1.hour,
+t1.the_geom
+
+ORDER BY t1.member_casual, t1.weekday_num, t1.hour, COUNT(*)
