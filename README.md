@@ -160,6 +160,15 @@ The map of neighborhoods categorized:
 <img width="781" height="787" alt="Categorized Chicago Neighborhoods" src="https://github.com/user-attachments/assets/8a297c52-60c1-4f74-8d4a-3ab6060c95e8" />   <br> 
 and the number of rides by category, for members and casual riders:
 
-<img width="249" height="785" alt="Rides by Neighborhood Category" src="https://github.com/user-attachments/assets/ad80cff5-34e9-44b9-a0b2-4446c8c02afa" />
+<img width="249" height="785" alt="Rides by Neighborhood Category" src="https://github.com/user-attachments/assets/ad80cff5-34e9-44b9-a0b2-4446c8c02afa" /> <br>
+<br>
+At this point, I had created a final analysis table containing all the relevant information that I believe might show significant insights about rider behavior, and about this project in general. I ran a query, which is saved in a separate file, that includes dimension columns for casual rider or member cohort, bike type, weekday, time of day by hour, neighborhood, and broad neighborhood category. I kept my same three measures- number of rides, ride duration, and absolute distance, although at this point my analysis is focused on number of rides as the most useful measurement. I loaded this table into Tableau, which gave me the ability to quickly manipulate visualizations on the fly in all the ways that I thought might be insightful. I included the most useful ones below: <br>
+
+I sorted the number of rides by time of day and weekend (Saturday and Sunday) versus work week (Monday through Friday) to show the difference in the time of day patterns.
+<img width="1023" height="829" alt="Weekend vs Work Week Rides" src="https://github.com/user-attachments/assets/4ce7dd50-e08f-4941-8f01-6d37402e8531" /> <br>
+Clear patterns are visible: Rides were distributed smoothly on weekends, with a peak time around noon to 5pm, and there were two peaks on weekdays that coincide with regular commuting hours: 6am to 9am and 3pm to 6pm. These patterns held when I filtered for members and for casual riders: the pattern was especially pronounced for members, but still clearly existed for casual riders.
+
+The existence of the weekday ride pattern where more rides are happening during commuting hours implies that there are still a nontrivial number of commuters who are using the bike share without subscribing: an ideal group for Cyclistic to target. I focused on this cohort a bit more, and isolated morning commuting hours. 
+
 
 
