@@ -154,4 +154,12 @@ The next step was to organize all the ways that I had looked at the data, and re
 
 <img width="1621" height="627" alt="Useful Relationships for Bike Share dataset" src="https://github.com/user-attachments/assets/9fc39271-41fa-4c0b-a049-d9e268ed7310" />
 
+I manually (using my subjective opinion) bucketed the neighborhoods into three natural categories: Central, Inner Ring, and Outer. I assigned the categories and then joined a small category table to my main grouped analysis table.   
+The map of neighborhoods categorized:  
+
+<img width="781" height="787" alt="Categorized Chicago Neighborhoods" src="https://github.com/user-attachments/assets/8a297c52-60c1-4f74-8d4a-3ab6060c95e8" />   <br> 
+and the number of rides by category, for members and casual riders:
+
+<img width="249" height="785" alt="Rides by Neighborhood Category" src="https://github.com/user-attachments/assets/ad80cff5-34e9-44b9-a0b2-4446c8c02afa" />
+
 
