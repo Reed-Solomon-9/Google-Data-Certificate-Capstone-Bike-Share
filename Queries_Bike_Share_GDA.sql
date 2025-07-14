@@ -44,6 +44,16 @@ LIMIT 100
 SELECT COUNT(*)
 FROM bikeshare_06_24_to_05_25
 
+--determine number of rides for all possible membership statuses
+
+SELECT
+	member_casual,
+	COUNT(*) AS num_rides
+FROM
+	bikeshare_06_24_to_05_25
+
+GROUP BY member_casual
+
 --###QUERIES 1 & 2
 --determine totals for three measurements (number of rides, avg trip distance, avg trip duration)
 --for casual riders vs subscription members
@@ -208,7 +218,7 @@ SELECT
 	POWER((COS(start_lat * PI()/180) * (end_lng-start_lng) * 69.17), 2)
 	)::NUMERIC), 2) AS avg_distance_miles,
 	EXTRACT(DOW FROM started_at) AS week_num,  --for day of week
-	TO_CHAR(started_at, 'Day') day_of_week  --for day of week
+	TO_CHAR(started_at, 'Day') AS day_of_week  --for day of week
 	--TO_CHAR(started_at, 'Month') AS month,  --for month
 	--EXTRACT(MONTH FROM started_at) AS month_num  --for month
 
@@ -587,3 +597,77 @@ ORDER BY num_stations DESC
 CREATE INDEX final_analysis_table_geom_idx
 ON public.final_analysis_table_station_neighborhoods_2
 USING GIST (the_geom); 
+
+
+--creating table with neighborhood categories in PostgreSQL to join with main table
+DROP TABLE IF EXISTS neighborhood_categories
+CREATE TABLE neighborhood_categories (
+primary_neigh VARCHAR(100),
+neigh_category VARCHAR(100)
+);
+COPY neighborhood_categories FROM '/Users/reedw.solomon/Data_Folder/Table Creation for Trip Data in Postgresql/chicago_neighborhood_categories.csv' DELIMITER ',' CSV HEADER;
+
+--fix mistake on categorization of one neighborhood
+UPDATE neighborhood_categories
+SET neigh_category = 'Inner Ring'
+WHERE primary_neigh = 'United Center';
+
+SELECT *
+
+FROM neighborhood_categories
+
+--query to compare ride direction, hour, and weekday
+WITH WithCalculatedFields AS (
+	SELECT *,
+	TO_CHAR(started_at, 'Day') AS day_of_week,
+	EXTRACT(DOW FROM started_at) AS week_num, 
+	EXTRACT (HOUR FROM started_at) AS hour,
+	CASE WHEN (end_lat-start_lat) > 0 AND (end_lat-start_lat) >= (ABS(end_lng-start_lng) * 2.414213562) THEN 'North'
+	WHEN (end_lat-start_lat) < 0 AND (start_lat-end_lat) >= (ABS(end_lng-start_lng)*2.414213562) THEN 'South'
+	WHEN (end_lng-start_lng) > 0 AND (end_lng-start_lng) >= (ABS(end_lat-start_lat)*2.414213562) THEN 'East'
+	WHEN (end_lng-start_lng) < 0 AND (start_lng-end_lng) >= (ABS(end_lat-start_lat)*2.414213562) THEN 'West'
+	WHEN (end_lat-start_lat) > 0 AND (end_lng-start_lng) > 0 AND (end_lat-start_lat) < (ABS(end_lng-start_lng) * 2.414213562) AND (end_lng-start_lng) < (ABS(end_lat-start_lat)*2.414213562) THEN 'Northeast'
+	WHEN (end_lat-start_lat) > 0 AND (end_lng-start_lng) < 0 AND (end_lat-start_lat) < (ABS(end_lng-start_lng) * 2.414213562) AND (start_lng-end_lng) < (ABS(end_lat-start_lat)*2.414213562) THEN 'Northwest'
+	WHEN (end_lat-start_lat) < 0 AND (end_lng-start_lng) > 0 AND (start_lat-end_lat) < (ABS(end_lng-start_lng) * 2.414213562) AND (end_lng-start_lng) < (ABS(end_lat-start_lat)*2.414213562) THEN 'Southeast'
+	WHEN (end_lat-start_lat) < 0 AND (end_lng-start_lng) < 0 AND (start_lat-end_lat) < (ABS(end_lng-start_lng) * 2.414213562) AND (start_lng-end_lng) < (ABS(end_lat-start_lat)*2.414213562) THEN 'Southwest'
+	ELSE 'None' END AS trip_direction,
+	--ROUND(
+	SQRT(
+	POWER((end_lat-start_lat) * 69, 2) + 
+	POWER((COS(start_lat * PI()/180) * (end_lng-start_lng) * 69.17), 2)
+	)::NUMERIC
+	--, 2) 
+	AS absolute_distance_miles
+	
+	
+	
+	FROM
+		bikeshare_06_24_to_05_25
+		
+	WHERE
+		SQRT(
+	POWER((end_lat-start_lat) * 69, 2) + 
+	POWER((COS(start_lat * PI()/180) * (end_lng-start_lng) * 69.17), 2)
+	)::NUMERIC > 0		
+)
+
+SELECT
+	member_casual,
+	rideable_type,
+	trip_direction,
+	day_of_week,
+	hour,
+	COUNT(*) AS num_rides,
+	ROUND(AVG(absolute_distance_miles), 2) AS absolute_distance_miles,
+	ROUND(AVG(EXTRACT (EPOCH FROM (ended_at - started_at))/60), 2) AS ride_duration,
+ 	week_num
+
+FROM 
+	WithCalculatedFields
+
+GROUP BY member_casual, 
+rideable_type, 
+trip_direction, 	
+day_of_week,
+week_num,
+hour

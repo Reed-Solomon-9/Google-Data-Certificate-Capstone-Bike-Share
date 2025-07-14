@@ -1,6 +1,8 @@
 --###QUERIES 12 & 13: Full table query with calculated fields JOINED with Chicago Neighborhoods GIS table. Then pivoted wider to compare cohorts.
 
 --Start of double CTE
+--I also wrapped the query in a third WITH statement to pivot the table wider by including seperate columns for members and casual riders for each of the three measures.
+--The pivoted version has some uses, but when loading my data into Tableau I used the non-pivoted version.
 CREATE TABLE measures_by_member_neigh_weekday_1 AS
 WITH FullTableForPivot AS ( 
 
@@ -78,7 +80,7 @@ WHERE absolute_distance_miles > 0
 SELECT
 		--dimensions
 	member_casual,
-	rideable_type,
+	--rideable_type,
 	primary_neigh,
 	--weekday,
 	--weekday_num,
@@ -94,11 +96,11 @@ FROM
 	JoinedAndCalculated
 
 GROUP BY member_casual, primary_neigh, 
-rideable_type,
+--rideable_type,
 --weekday, weekday_num, 
 the_geom
 
---ORDER BY member_casual, COUNT(*)
+ORDER BY member_casual, COUNT(*) DESC
 )
 
 SELECT
