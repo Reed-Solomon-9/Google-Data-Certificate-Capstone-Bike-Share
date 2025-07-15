@@ -164,6 +164,7 @@ GROUP BY rideable_type
 	
 	
 --extract month from timestamp, convert month number to month name, count trips by month
+--this was my first attempt at calculating month; I later learned a more efficent way
 
 SELECT
 	
@@ -617,11 +618,14 @@ SELECT *
 FROM neighborhood_categories
 
 --query to compare ride direction, hour, and weekday
+--added month as well
 WITH WithCalculatedFields AS (
 	SELECT *,
 	TO_CHAR(started_at, 'Day') AS day_of_week,
 	EXTRACT(DOW FROM started_at) AS week_num, 
 	EXTRACT (HOUR FROM started_at) AS hour,
+	TO_CHAR(started_at, 'Month') AS month, 
+	EXTRACT(MONTH FROM started_at) AS month_num, 	
 	CASE WHEN (end_lat-start_lat) > 0 AND (end_lat-start_lat) >= (ABS(end_lng-start_lng) * 2.414213562) THEN 'North'
 	WHEN (end_lat-start_lat) < 0 AND (start_lat-end_lat) >= (ABS(end_lng-start_lng)*2.414213562) THEN 'South'
 	WHEN (end_lng-start_lng) > 0 AND (end_lng-start_lng) >= (ABS(end_lat-start_lat)*2.414213562) THEN 'East'
@@ -655,19 +659,30 @@ SELECT
 	member_casual,
 	rideable_type,
 	trip_direction,
+	month,
 	day_of_week,
 	hour,
 	COUNT(*) AS num_rides,
 	ROUND(AVG(absolute_distance_miles), 2) AS absolute_distance_miles,
 	ROUND(AVG(EXTRACT (EPOCH FROM (ended_at - started_at))/60), 2) AS ride_duration,
- 	week_num
+ 	month_num,
+	week_num
 
 FROM 
 	WithCalculatedFields
 
 GROUP BY member_casual, 
 rideable_type, 
-trip_direction, 	
+trip_direction, 
+month,
+month_num,
 day_of_week,
 week_num,
 hour
+
+ORDER BY 
+member_casual,
+month_num,
+week_num,
+hour,
+rideable_type
