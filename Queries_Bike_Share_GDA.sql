@@ -686,3 +686,9 @@ month_num,
 week_num,
 hour,
 rideable_type
+
+SELECT 
+MIN(started_at) AS earliest_ride,
+MAX(started_at) AS latest_ride
+
+FROM bikeshare_06_24_to_05_25
