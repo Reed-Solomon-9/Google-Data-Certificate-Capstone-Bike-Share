@@ -1,0 +1,210 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 Times-Roman;\f2\fswiss\fcharset0 Arial-BoldMT;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red16\green60\blue192;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c6667\c33333\c80000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}
+{\list\listtemplateid7\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid601\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid7}
+{\list\listtemplateid8\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid701\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid8}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}{\listoverride\listid8\listoverridecount0\ls8}}
+\vieww11820\viewh8700\viewkind0
+\deftab720
+\pard\pardeftab720\qc\partightenfactor0
+
+\f0\fs53\fsmilli26667 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Casual Riders Vs. Subscription Members: Differences in Behavior
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 For Cyclistic bicycle sharing company, July 2025
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs34\fsmilli17333 \cf0 Section 1: Project Overview
+\f1\b0\fs24 \
+\
+
+\f0\fs29\fsmilli14667 This analysis focuses on the behaviors of casual riders and subscription members who rode Cyclistic bikes in Chicago through their bike sharing service. The company would like to convert more casual riders to subscriptions, and tasked me with finding the ways in which the two groups behave differently.\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 The data has a single observation for each ride. The key information that is missing from this data is a way to identify the riders themselves: I will not be able to connect the individual rides to the person riding the bike.
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 I am using one year of data from {\field{\*\fldinst{HYPERLINK "https://divvy-tripdata.s3.amazonaws.com/index.html"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 Index of bucket "divvy-tripdata"}}
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 for the time period from May 2024 through April 2025. This was the most recent data available when I first loaded the data into my table on June 2nd.
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 It was made available under this license: {\field{\*\fldinst{HYPERLINK "https://divvybikes.com/data-license-agreement"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 Data License Agreement | Divvy Bikes}}
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 My goal for this project is to establish ways in which behavior differed between casual riders and subscription members, and to identify patterns that could potentially be relevant to the business goal of increasing the number of subscription members as a share of all riders.
+\f1\fs24 \
+\
+\
+
+\f2\b\fs34\fsmilli17333 Section 2: Preparation, Data Integrity, and ETL
+\f1\b0\fs24 \
+\
+
+\f0\fs29\fsmilli14667 I began this project by previewing the first and last months of the data in RStudio in order to determine the schema, and whether the columns were the same for the entire year. I then used PostgreSQL (by way of the query tool in pgAdmin GUI) to clean, transform, and analyze the data.\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 First, I created a table for the entire year. I specified all the datatypes for the table, and included a check to ensure the locations specified by the starting and ending latitude and longitude columns were valid.\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 Once the table was specified, I loaded the data into it using SQL. The table is composed of 12 CSV files organized consecutively.
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 I then checked the data for cleanliness and validity. I used COUNT DISTINCT and GROUP BY statements to determine the number of unique values for the character fields, and searched for null values in every column. The data is very clean, and every observation has a value in the primary key column.
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 I used a few more basic queries to check for the total number of observations (5,735,884) and to generally explore and get a feel for the data.\'a0
+\f1\fs24 \
+\
+
+\f2\b\fs34\fsmilli17333 Section 3: Data Transformation
+\f1\b0\fs24 \
+\
+
+\f0\fs29\fsmilli14667 The data table contains the following dimensions: ride type, start station, end station, and whether the rider is a subscription member; plus the start time and end time. There was no quantitative data immediately available in the data, and the raw timestamps were not useful in their current form. It was necessary to create some calculated columns.\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 I started with the quantitative measurements, because these can easily be used in every query without complicated grouping logic. I came up with three:
+\f1\fs24 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f2\b\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Number of rides
+\f0\b0 , derived using the COUNT function.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f2\b\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Trip duration
+\f0\b0 , derived by subtracting the start timestamp from the end timestamp and converting the interval to an EPOCH numeric datatype.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0
+\f2\b\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Absolute distance traveled
+\f0\b0 , derived through a simple trigonometric formula using the starting and ending longitude and latitude. This formula operated on the assumption of a flat plane of coordinates, which I believe is appropriate for a set of locations concentrated in a single city.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 I then ran a series of queries grouping the data with SQL by both membership cohort and each of the qualitative columns, with the three measurements included. This yielded limited insight, so I began transforming the qualitative columns as well. I created the following calculated qualitative columns for my analysis:\'a0
+\f1\fs24 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0
+\f2\b\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Month
+\f0\b0 , extracted from the ride start timestamp\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0
+\f2\b\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Day of week
+\f0\b0 , extracted from the ride start timestamp\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls6\ilvl0
+\f2\b\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Hour
+\f0\b0 , extracted from the ride start timestamp\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls7\ilvl0
+\f2\b\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Trip direction
+\f0\b0 , derived using a CASE statement with a trigonometric function from the starting and ending longitude and latitude\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls8\ilvl0
+\f2\b\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Neighborhood
+\f0\b0 . This was created by spatial-joining my table to a GIS geometry table that I found on the City of Chicago website\'a0 (link: {\field{\*\fldinst{HYPERLINK "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Neighborhoods/bbvz-uum9"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 Boundaries - Neighborhoods | City of Chicago | Data Portal}}). I chose neighborhoods rather than zip codes or wards because they are more recognizable.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 I created summary tables with SQL that featured each of these, and made simple visualizations for each to help with my understanding. For these, I also isolated rides where the rider did not actually go anywhere (likely never used the bike at all), and then updated my queries to exclude these zero-distance rides when I failed to find a useful pattern for when they happened.\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 I also attempted to load the entire table into Tableau to allow me to more easily manipulate the data on the fly. However, the program would not run smoothly with a data table so large, especially once calculated fields were added. Nearly all data transformation was done through SQL.
+\f1\fs24 \
+\
+\
+
+\f2\b\fs34\fsmilli17333 Section 4: Analysis
+\f1\b0\fs24 \
+\
+
+\f0\fs29\fsmilli14667 With my relevant columns having been created, I made an overview table in Google Sheets to summarize all of the relationships I was able to measure. I highlighted significant relationships in red, and small but potentially useful relationships in a light pink.\'a0
+\f1\fs24 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs34\fsmilli17333 \cf0 \strokec2 {{\NeXTGraphic AD_4nXdGsrSKvue1ZEFnY2Fhc9MAmaQkT860AMZtdFB0syXW6NdW998jXbkCgOeSFz-8JLccL3L_V9iWqGoen3MjDIEzEkyyVqeYuuxGoJsnUcA6kSPRF_vf4Yt9g2HbINtIoEs-hyTYlw.png \width32000 \height12320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 (this table is also included in my repository as it may be too difficult to read in this format)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 This gave me a somewhat comprehensive look at what is in the dataset. In terms of completeness, the logical next step would be to analyze combinations of multiple qualitative columns, but that could require hundreds of separate queries and charts, and likely a lot of wasted time.
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 This first analysis yielded some concrete insights about rider behavior, which I outline below, supported with visualizations from Tableau.
+\f1\fs24 \
+\
+\
+\
+
+\f2\b\fs34\fsmilli17333 Section 5: Conclusions
+\f1\b0\fs24 \
+\
+
+\f2\b\fs34\fsmilli17333 Section 6: Business Recommendations
+\f1\b0\fs24 \
+\pard\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs34\fsmilli17300 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+}
