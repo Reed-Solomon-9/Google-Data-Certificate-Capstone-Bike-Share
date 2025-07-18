@@ -70,12 +70,12 @@ SELECT
 	
 FROM
 	bikeshare_06_24_to_05_25
-/*WHERE 
+	WHERE 
 SQRT(
 	POWER((end_lat-start_lat) * 69, 2) + 
 	POWER((COS(start_lat * PI()/180) * (end_lng-start_lng) * 69.17), 2)
 	)::NUMERIC >0
-*/
+
 GROUP BY member_casual	
 --determine number of values for bike type (3: classic bike, electric bike, electric scooter)
 SELECT
