@@ -88,12 +88,11 @@ There was a high share of casual rides in neighborhoods in the **south** and **w
 
 The other relationships between variables were less relevant to this analysis, so I focused on combining the most useful qualitative data.
 
-I grouped the data by both day of week and time of day. First I determined that most of the difference in the numbers of casual rides and subscription members happened during the work week. 
+I grouped the data by both day of week and time of day. First I determined that most of the difference in the numbers of casual rides and subscription members happened during the work week.</br> 
 
-
+<img width="1023" height="829" alt="Weekend vs Work Week Rides" src="https://github.com/user-attachments/assets/051ef08e-76db-43a8-8357-c79f4a2e335c" /></br>
 
 Then I established a distinct difference between rider behavior during the work week (Monday through Friday) and the weekend. There was a clear pattern to rider behavior between these days, and though the pattern was more pronounced for subscription members, it was still clearly observable for casual riders.
-
 
 
 
