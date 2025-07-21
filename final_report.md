@@ -80,21 +80,21 @@ Both groups travelled similar distances.</br>
 
 <img width="479" height="850" alt="Chicago Neighborhoods by casual rider percentage" src="https://github.com/user-attachments/assets/7930a96b-7d2a-44c7-b7a3-e739487c216a" /></br>
 
-Percentage of casual rides varies a lot between neighborhoods.
-There was a high share of casual rides in neighborhoods in the **south** and **west** of the city, and generally far from the highest-density areas.
-**Central neighborhoods** with lots of landmarks also had **relatively high** shares of casual rides.
-**Inner ring neighborhoods** just outside of the city center, particularly to the north, had the **lowest** share of casual riders (highest share of subscribers). 
+- Percentage of casual rides varies a lot between neighborhoods.
+- There was a high share of casual rides in neighborhoods in the **south** and **west** of the city, and generally far from the highest-density areas.
+- **Central neighborhoods** with lots of landmarks also had **relatively high** shares of casual rides.
+- **Inner ring neighborhoods** just outside of the city center, particularly to the north, had the **lowest** share of casual riders (highest share of subscribers). 
 
 
 The other relationships between variables were less relevant to this analysis, so I focused on combining the most useful qualitative data.
 
 I grouped the data by both day of week and time of day. First I determined that most of the difference in the numbers of casual rides and subscription members happened during the work week.</br> 
 
-<img width="1023" height="829" alt="Weekend vs Work Week Rides" src="https://github.com/user-attachments/assets/051ef08e-76db-43a8-8357-c79f4a2e335c" /></br>
+<img width="792" height="136" alt="Weekend Vs  Work Week by cohort" src="https://github.com/user-attachments/assets/0faaa3de-b987-4030-ba86-0b62347e8757" /></br>
 
-Then I established a distinct difference between rider behavior during the work week (Monday through Friday) and the weekend. There was a clear pattern to rider behavior between these days, and though the pattern was more pronounced for subscription members, it was still clearly observable for casual riders.
+Then I established a distinct difference between rider behavior during the work week (Monday through Friday) and the weekend. There was a clear pattern to rider behavior between these days, and though the pattern was more pronounced for subscription members, it was still clearly observable for casual riders.</br>
 
-
+<img width="792" height="820" alt="Weekend Vs Work Week Rides" src="https://github.com/user-attachments/assets/28cce8e3-4cf9-4d82-8aae-628e0335548c" /></br>
 
 Weekend rides gradually increased from the early morning to a flat peak from 11am to 5pm, while work week rides showed the hourly pattern where rides had a sharp peak from 7-9am, and then a larger sharp peak from 3-7pm. 
 
@@ -102,26 +102,28 @@ I also bucketed the 97 Chicago neighborhoods into three categories: Central, Inn
 
 On the map, this is how they are oriented:
 
-
+<img width="645" height="782" alt="Category Map" src="https://github.com/user-attachments/assets/d27b9af0-c5dd-4dbb-8d69-767d197cf6c1" /></br>
 
 Rides are broken down between these neighborhood categories as shown above.
 
-Below is how they were distributed:
+Below is how they were distributed:</br>
 
+<img width="767" height="169" alt="Rides by Category" src="https://github.com/user-attachments/assets/b5ab260b-8781-4b17-8041-fc4666e76c10" /></br>
 
+<img width="792" height="820" alt="Category, Hour" src="https://github.com/user-attachments/assets/a1f7d641-cfa7-4ccc-af3a-17e740b4e18d" /></br>
 
 
 ### Section 5: Conclusions
 
-Behavior differs significantly between casual riders and subscription members by weekday. Many more midweek/work week riders are subscription members, while casual riders are more frequent users on weekends. This implies that subscription members use the bikes to commute to work.
-Behavior also differs by neighborhood. Casual rides are most frequent as a share of all rides in the most high-traffic and tourist friendly neighborhoods like Millennium Park, Wrigleyville, Grant Park, Museum Campus, Streeterville, Gold Coast; as well as outer neighborhoods with far lower ride frequency like Lawndale, Brighton Park, and Ashburn. 
-Ride behavior follows a consistent pattern by hour throughout the day. Rides are highest on weekdays (Monday through Friday) during morning and especially afternoon commute hours, while the daily distribution is a smooth curve on weekends (Saturday and Sunday) with the peak occurring from 11am to 5pm.
-Subscription rides are most frequent as a share of all rides in inner ring neighborhoods like Little Italy, West Loop, East Village, and Douglas.
-I’ve pinpointed a few neighborhoods, particularly Lakeview and Lincoln Park, that have a combination of large usage and relatively low subscription rate that may be worth targeting with neighborhood-specific promotions.
-This dataset does not have any information on the riders themselves- only the information about each individual ride. Because of this, it is necessary to infer group differences between members and casual riders based on each group’s average behavior.
-Subscription uptake is quite strong, meaning that gains will have to be made on the margins- either to increase already high subscription use in the inner ring neighborhoods, to convert a relatively small population in outer neighborhoods, or to convert the casual weekend users in central neighborhoods who are not just temporarily visiting the city.
-A large majority (over 71%) of bike share users reside in inner ring neighborhoods of the city, such as Little Italy, River North, and the Lower West Side. These neighborhoods have strong subscription uptake, but they still contain a solid majority of casual riders. 
-Riders starting from outer neighborhoods make up less than 8% of total rides. They have generally higher percentages of casual users, so it looks like there could be some opportunity for subscriber growth, but I think it’s important to note that from these locations, it is hard to position bike share rides as a viable alternative to the rail system for commuters.
+- Behavior differs significantly between casual riders and subscription members by **weekday**. Many more midweek/work week riders are subscription members, while casual riders are more frequent users on weekends. This implies that subscription members use the bikes to commute to work.
+- Behavior also differs by **neighborhood**. Casual rides are most frequent as a share of all rides in the most **high-traffic and tourist friendly neighborhoods** like Millennium Park, Wrigleyville, Grant Park, Museum Campus, Streeterville, Gold Coast; as well as **outer neighborhoods** with far lower ride frequency like Lawndale, Brighton Park, and Ashburn. 
+- Ride behavior follows a consistent pattern by hour throughout the day. Rides are highest on **weekdays** (Monday through Friday) **during morning and especially afternoon commute hours**, while the daily distribution is a smooth curve on weekends (Saturday and Sunday) with the peak occurring from **11am to 5pm**.
+- Subscription rides are most frequent as a share of all rides in **inner ring neighborhoods** like Little Italy, West Loop, East Village, and Douglas.
+- A **large majority (over 71%)** of all bike share users reside in these **inner ring neighborhoods**. These neighborhoods have strong subscription uptake, but they still contain a solid majority of casual riders. 
+- I’ve pinpointed a few neighborhoods, particularly **Lakeview** and **Lincoln Park**, that have a combination of large usage and relatively low subscription rate that may be worth targeting with neighborhood-specific promotions.
+- This dataset does not have any information on the riders themselves- only the information about each individual ride. Because of this, it is necessary to infer group differences between members and casual riders based on each group’s average behavior.
+- Subscription uptake is quite strong, meaning that gains will have to be made on the margins- either to increase already high subscription use in the inner ring neighborhoods, to convert a relatively small population in outer neighborhoods, or to convert the casual weekend users in central neighborhoods who are not just temporarily visiting the city.
+- Riders starting from **outer neighborhoods** make up **less than 8%** of total rides. They have generally higher percentages of casual users, so it looks like there could be some opportunity for subscriber growth, but I think it’s important to note that from these locations, it is hard to position bike share rides as a viable alternative to the rail system for commuters.
 
 
 
@@ -129,8 +131,9 @@ Riders starting from outer neighborhoods make up less than 8% of total rides. Th
 
 
 After reviewing this dataset in a comprehensive manner, I propose the following business decisions. These may rely on other factors, but they are rooted in insights from this data.
-Target the highest traffic inner ring neighborhoods with online targeted advertisements and neighborhood-specific promotions, and perhaps physical advertisements such as billboards/wallscapes/mural advertising. Chicago residents take pride in their neighborhoods, and the neighborhood names are highly recognizable. I believe they will respond well to neighborhood-specific appeals.
-Target early morning weekday riders who are not subscribed. Casual riders ought to be shown how they can benefit from a subscription when they are making the decision to purchase a ride. Giving them this option for early rides will target the riders who would be most likely to want a subscription.
-Present subscriptions differently on weekends versus weekdays. Weekend subscriptions could be offered as a way to enjoy the city, while the practicality of weekday commute hour subscriptions could be emphasized.
-Consider a “nights and weekends” subscription option. This could be usable outside of commute hours, to segment the market and allow the offerings to be priced more optimally.
-Consider a discount for longer rides in outer neighborhoods. Riders took longer rides from these neighborhoods, and they have significantly lower rates of subscription. If financially feasible, a discount could allow the bikes to be competitive with rail transportation. This could potentially be more efficient than advertising due to the lower concentration of riders.
+
+- Target the **highest traffic inner ring neighborhoods** with online targeted advertisements and neighborhood-specific promotions, and perhaps physical advertisements such as billboards/wallscapes/mural advertising. Chicago residents take pride in their neighborhoods, and the neighborhood names are highly recognizable. I believe they will respond well to neighborhood-specific appeals.
+- Target **early morning weekday riders who are not subscribed**. Casual riders ought to be shown how they can benefit from a subscription when they are making the decision to purchase a ride. Giving them this option for early rides will target the riders who would be most likely to want a subscription.
+- **Present subscriptions differently on weekends versus weekdays**. Weekend subscriptions could be offered as a way to enjoy the city, while the practicality of weekday commute hour subscriptions could be emphasized.
+- Consider a **“nights and weekends” subscription option**. This could be usable outside of commute hours, to segment the market and allow the offerings to be priced more optimally.
+- Consider a **discount for longer rides in outer neighborhoods**. Riders took longer rides from these neighborhoods, and they have significantly lower rates of subscription. If financially feasible, a discount could allow the bikes to be competitive with rail transportation. This could potentially be more efficient than advertising due to the lower concentration of riders.
