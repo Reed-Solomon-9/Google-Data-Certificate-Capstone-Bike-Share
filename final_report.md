@@ -57,32 +57,33 @@ I also attempted to load the entire table into Tableau to allow me to more easil
 
 With my relevant columns having been created, I made an overview table in Google Sheets to summarize all of the relationships I was able to measure. I highlighted significant relationships in red, and small but potentially useful relationships in a light pink. 
 
+<img width="1619" height="623" alt="Bike Trips Useful Relationships" src="https://github.com/user-attachments/assets/52147c50-2aac-4208-96d6-303e89f72b06" />
 
-
-(this table is also included in my repository as it may be too difficult to read in this format)
-
+_(this table is also included in my repository as it may be too difficult to read in this format)_</br>
+</br>
 This gave me a somewhat comprehensive look at what is in the dataset. In terms of completeness, the logical next step would be to analyze combinations of multiple qualitative columns, but that could require hundreds of separate queries and charts, and likely a lot of wasted time.
 
 This first analysis yielded some concrete insights about rider behavior, which I outline below, supported with visualizations from Tableau.
 
-
+<img width="649" height="855" alt="Basics Dashboard" src="https://github.com/user-attachments/assets/f50569f1-90dc-4587-b881-d5aa9becd0c8" /></br>
 
 Approximately 65% of trips were taken by subscription members.
 Casual riders took longer trips (in terms of ride duration) than subscription members.
-Both groups travelled similar distances
+Both groups travelled similar distances.</br>
+</br>
 
+<img width="649" height="855" alt="Number of Rides by Month, Weekday, Hour" src="https://github.com/user-attachments/assets/d102eb33-dea6-490d-b74a-3173e1bd4f37" /></br>
 
+- Number of rides followed a similar monthly pattern for members and casual riders. 
+- By week, there was an opposite pattern: **casual** rides were **higher on weekends**, while **member** rides were **higher on weekdays**
+- By hour, both groups took the most rides around 5pm (17:00 hour). However, for subscription members there were **two clear peaks**, one around 8am and one around 5pm.
 
-Number of rides followed a similar monthly pattern for members and casual riders. 
-By week, there was an opposite pattern: casual rides were higher on weekends, while member rides were higher on weekdays
-By hour, both groups took the most rides around 5pm (17:00 hour). However, for subscription members there were two clear peaks, one around 8am and one around 5pm.
-
-
+<img width="479" height="850" alt="Chicago Neighborhoods by casual rider percentage" src="https://github.com/user-attachments/assets/7930a96b-7d2a-44c7-b7a3-e739487c216a" /></br>
 
 Percentage of casual rides varies a lot between neighborhoods.
-There was a high share of casual rides in neighborhoods in the south and west of the city, and generally far from the highest-density areas.
-Central neighborhoods with lots of landmarks also had relatively high shares of casual rides.
-Inner ring neighborhoods just outside of the city center, particularly to the north, had the lowest share of casual riders (highest share of subscribers). 
+There was a high share of casual rides in neighborhoods in the **south** and **west** of the city, and generally far from the highest-density areas.
+**Central neighborhoods** with lots of landmarks also had **relatively high** shares of casual rides.
+**Inner ring neighborhoods** just outside of the city center, particularly to the north, had the **lowest** share of casual riders (highest share of subscribers). 
 
 
 The other relationships between variables were less relevant to this analysis, so I focused on combining the most useful qualitative data.
