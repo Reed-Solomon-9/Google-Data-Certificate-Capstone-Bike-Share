@@ -1,0 +1,2262 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0415.1018                               -->
+<workbook original-version='18.1' source-build='2025.1.1 (20251.25.0415.1018)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <HideSortControls />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneFriendlyName />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='number_trips_and_duration_by_membership_biketype_month' inline='true' name='federated.07588te0dwnniz1axndlt0dwgj6k' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='number_trips_and_duration_by_membership_biketype_month' name='textscan.14v6q5q0s45e36148l2k006s0ebe'>
+            <connection class='textscan' directory='/Users/reedw.solomon/Documents/Trip Data for Bike Share Case Study' filename='number_trips_and_duration_by_membership_biketype_month.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.14v6q5q0s45e36148l2k006s0ebe' name='number_trips_and_duration_by_membership_biketype_month.csv' table='[number_trips_and_duration_by_membership_biketype_month#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='member_casual' ordinal='0' />
+            <column datatype='string' name='rideable_type' ordinal='1' />
+            <column datatype='string' name='month' ordinal='2' />
+            <column datatype='integer' name='month_num' ordinal='3' />
+            <column datatype='integer' name='num_rides' ordinal='4' />
+            <column datatype='real' name='avg_trip_duration' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[number_trips_and_duration_by_membership_biketype_month.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>member_casual</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[member_casual]</local-name>
+            <parent-name>[number_trips_and_duration_by_membership_biketype_month.csv]</parent-name>
+            <remote-alias>member_casual</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[number_trips_and_duration_by_membership_biketype_month.csv_C648F6130AF54CBCBBBF9FAC8D837FA3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rideable_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rideable_type]</local-name>
+            <parent-name>[number_trips_and_duration_by_membership_biketype_month.csv]</parent-name>
+            <remote-alias>rideable_type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[number_trips_and_duration_by_membership_biketype_month.csv_C648F6130AF54CBCBBBF9FAC8D837FA3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[number_trips_and_duration_by_membership_biketype_month.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[number_trips_and_duration_by_membership_biketype_month.csv_C648F6130AF54CBCBBBF9FAC8D837FA3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_num</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[month_num]</local-name>
+            <parent-name>[number_trips_and_duration_by_membership_biketype_month.csv]</parent-name>
+            <remote-alias>month_num</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[number_trips_and_duration_by_membership_biketype_month.csv_C648F6130AF54CBCBBBF9FAC8D837FA3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_rides</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_rides]</local-name>
+            <parent-name>[number_trips_and_duration_by_membership_biketype_month.csv]</parent-name>
+            <remote-alias>num_rides</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[number_trips_and_duration_by_membership_biketype_month.csv_C648F6130AF54CBCBBBF9FAC8D837FA3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_trip_duration</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_trip_duration]</local-name>
+            <parent-name>[number_trips_and_duration_by_membership_biketype_month.csv]</parent-name>
+            <remote-alias>avg_trip_duration</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[number_trips_and_duration_by_membership_biketype_month.csv_C648F6130AF54CBCBBBF9FAC8D837FA3]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='number_trips_and_duration_by_membership_biketype_month.csv' datatype='table' name='[__tableau_internal_object_id__].[number_trips_and_duration_by_membership_biketype_month.csv_C648F6130AF54CBCBBBF9FAC8D837FA3]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Avg Trip Duration' datatype='real' name='[avg_trip_duration]' role='dimension' type='quantitative' />
+      <column caption='Member Casual' datatype='string' name='[member_casual]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;casual&quot;' value='Casual' />
+          <alias key='&quot;member&quot;' value='Subscription Member' />
+        </aliases>
+      </column>
+      <column caption='Month' datatype='string' name='[month]' role='dimension' type='nominal' />
+      <column caption='Month Num' datatype='integer' name='[month_num]' role='dimension' type='quantitative' />
+      <column caption='Num Rides' datatype='integer' name='[num_rides]' role='measure' type='quantitative' />
+      <column caption='Rideable Type' datatype='string' name='[rideable_type]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;classic_bike&quot;' value='Classic Bike' />
+          <alias key='&quot;electric_bike&quot;' value='Electric Bike' />
+          <alias key='&quot;electric_scooter&quot;' value='Electric Scooter' />
+        </aliases>
+      </column>
+      <column-instance column='[member_casual]' derivation='None' name='[none:member_casual:nk]' pivot='key' type='nominal' />
+      <column-instance column='[rideable_type]' derivation='None' name='[none:rideable_type:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/tableau-temp/#TableauTemp_0jyv2cz11pyw0l1c2tuoy15v1pya.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/18/2025 05:56:35 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>member_casual</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[member_casual]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>member_casual</remote-alias>
+              <ordinal>0</ordinal>
+              <family>number_trips_and_duration_by_membership_biketype_month.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[number_trips_and_duration_by_membership_biketype_month.csv_C648F6130AF54CBCBBBF9FAC8D837FA3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rideable_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[rideable_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rideable_type</remote-alias>
+              <ordinal>1</ordinal>
+              <family>number_trips_and_duration_by_membership_biketype_month.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[number_trips_and_duration_by_membership_biketype_month.csv_C648F6130AF54CBCBBBF9FAC8D837FA3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month</remote-alias>
+              <ordinal>2</ordinal>
+              <family>number_trips_and_duration_by_membership_biketype_month.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[number_trips_and_duration_by_membership_biketype_month.csv_C648F6130AF54CBCBBBF9FAC8D837FA3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month_num</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[month_num]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month_num</remote-alias>
+              <ordinal>3</ordinal>
+              <family>number_trips_and_duration_by_membership_biketype_month.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[number_trips_and_duration_by_membership_biketype_month.csv_C648F6130AF54CBCBBBF9FAC8D837FA3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_rides</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_rides]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>num_rides</remote-alias>
+              <ordinal>4</ordinal>
+              <family>number_trips_and_duration_by_membership_biketype_month.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>52</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[number_trips_and_duration_by_membership_biketype_month.csv_C648F6130AF54CBCBBBF9FAC8D837FA3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_trip_duration</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_trip_duration]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_trip_duration</remote-alias>
+              <ordinal>5</ordinal>
+              <family>number_trips_and_duration_by_membership_biketype_month.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[number_trips_and_duration_by_membership_biketype_month.csv_C648F6130AF54CBCBBBF9FAC8D837FA3]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:rideable_type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;classic_bike&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;electric_scooter&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;electric_bike&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:member_casual:nk]' type='palette'>
+            <map to='#6388b4'>
+              <bucket>&quot;member&quot;</bucket>
+            </map>
+            <map to='#ef6f6a'>
+              <bucket>&quot;casual&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='number_trips_and_duration_by_membership_biketype_month.csv' id='number_trips_and_duration_by_membership_biketype_month.csv_C648F6130AF54CBCBBBF9FAC8D837FA3'>
+            <properties context=''>
+              <relation connection='textscan.14v6q5q0s45e36148l2k006s0ebe' name='number_trips_and_duration_by_membership_biketype_month.csv' table='[number_trips_and_duration_by_membership_biketype_month#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='member_casual' ordinal='0' />
+                  <column datatype='string' name='rideable_type' ordinal='1' />
+                  <column datatype='string' name='month' ordinal='2' />
+                  <column datatype='integer' name='month_num' ordinal='3' />
+                  <column datatype='integer' name='num_rides' ordinal='4' />
+                  <column datatype='real' name='avg_trip_duration' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='number_trips_and_duration_by_week_membership_biketype' inline='true' name='federated.1vk29s408zmo5q12vohxa1v2fv5m' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='number_trips_and_duration_by_week_membership_biketype' name='textscan.1n1g04j0amjoo017vxm9x0wgsjtb'>
+            <connection class='textscan' directory='/Users/reedw.solomon/Documents/Trip Data for Bike Share Case Study' filename='number_trips_and_duration_by_week_membership_biketype.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1n1g04j0amjoo017vxm9x0wgsjtb' name='number_trips_and_duration_by_week_membership_biketype.csv' table='[number_trips_and_duration_by_week_membership_biketype#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='member_casual' ordinal='0' />
+            <column datatype='string' name='rideable_type' ordinal='1' />
+            <column datatype='integer' name='num_rides' ordinal='2' />
+            <column datatype='real' name='avg_trip_duration' ordinal='3' />
+            <column datatype='integer' name='extract' ordinal='4' />
+            <column datatype='string' name='day_of_week' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[number_trips_and_duration_by_week_membership_biketype.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>member_casual</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[member_casual]</local-name>
+            <parent-name>[number_trips_and_duration_by_week_membership_biketype.csv]</parent-name>
+            <remote-alias>member_casual</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[number_trips_and_duration_by_week_membership_biketype.csv_5082848D87E9472989B7B45CA01558B1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rideable_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rideable_type]</local-name>
+            <parent-name>[number_trips_and_duration_by_week_membership_biketype.csv]</parent-name>
+            <remote-alias>rideable_type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[number_trips_and_duration_by_week_membership_biketype.csv_5082848D87E9472989B7B45CA01558B1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_rides</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_rides]</local-name>
+            <parent-name>[number_trips_and_duration_by_week_membership_biketype.csv]</parent-name>
+            <remote-alias>num_rides</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[number_trips_and_duration_by_week_membership_biketype.csv_5082848D87E9472989B7B45CA01558B1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_trip_duration</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_trip_duration]</local-name>
+            <parent-name>[number_trips_and_duration_by_week_membership_biketype.csv]</parent-name>
+            <remote-alias>avg_trip_duration</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[number_trips_and_duration_by_week_membership_biketype.csv_5082848D87E9472989B7B45CA01558B1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>extract</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[extract]</local-name>
+            <parent-name>[number_trips_and_duration_by_week_membership_biketype.csv]</parent-name>
+            <remote-alias>extract</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[number_trips_and_duration_by_week_membership_biketype.csv_5082848D87E9472989B7B45CA01558B1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_week</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[day_of_week]</local-name>
+            <parent-name>[number_trips_and_duration_by_week_membership_biketype.csv]</parent-name>
+            <remote-alias>day_of_week</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[number_trips_and_duration_by_week_membership_biketype.csv_5082848D87E9472989B7B45CA01558B1]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='number_trips_and_duration_by_week_membership_biketype.csv' datatype='table' name='[__tableau_internal_object_id__].[number_trips_and_duration_by_week_membership_biketype.csv_5082848D87E9472989B7B45CA01558B1]' role='measure' type='quantitative' />
+      <column caption='Avg Trip Duration' datatype='real' datatype-customized='true' name='[avg_trip_duration]' role='dimension' type='quantitative' />
+      <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+      <column caption='Extract' datatype='integer' name='[extract]' role='measure' type='quantitative' />
+      <column caption='Member Casual' datatype='string' name='[member_casual]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;casual&quot;' value='Casual' />
+          <alias key='&quot;member&quot;' value='Member' />
+        </aliases>
+      </column>
+      <column caption='Num Rides' datatype='integer' name='[num_rides]' role='measure' type='quantitative' />
+      <column caption='Rideable Type' datatype='string' name='[rideable_type]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;classic_bike&quot;' value='Classic Bike' />
+          <alias key='&quot;electric_bike&quot;' value='Electric Bike' />
+          <alias key='&quot;electric_scooter&quot;' value='Electric Scooter' />
+        </aliases>
+      </column>
+      <column-instance column='[day_of_week]' derivation='None' name='[none:day_of_week:nk]' pivot='key' type='nominal' />
+      <column-instance column='[member_casual]' derivation='None' name='[none:member_casual:nk]' pivot='key' type='nominal' />
+      <column-instance column='[rideable_type]' derivation='None' name='[none:rideable_type:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/tableau-temp/#TableauTemp_19uq5hj0t4zeiy1bjkvs21xnm0qs.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/18/2025 05:56:38 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>member_casual</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[member_casual]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>member_casual</remote-alias>
+              <ordinal>0</ordinal>
+              <family>number_trips_and_duration_by_week_membership_biketype.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[number_trips_and_duration_by_week_membership_biketype.csv_5082848D87E9472989B7B45CA01558B1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rideable_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[rideable_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rideable_type</remote-alias>
+              <ordinal>1</ordinal>
+              <family>number_trips_and_duration_by_week_membership_biketype.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[number_trips_and_duration_by_week_membership_biketype.csv_5082848D87E9472989B7B45CA01558B1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_rides</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_rides]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>num_rides</remote-alias>
+              <ordinal>2</ordinal>
+              <family>number_trips_and_duration_by_week_membership_biketype.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[number_trips_and_duration_by_week_membership_biketype.csv_5082848D87E9472989B7B45CA01558B1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_trip_duration</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_trip_duration]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_trip_duration</remote-alias>
+              <ordinal>3</ordinal>
+              <family>number_trips_and_duration_by_week_membership_biketype.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>40</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[number_trips_and_duration_by_week_membership_biketype.csv_5082848D87E9472989B7B45CA01558B1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>extract</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[extract]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>extract</remote-alias>
+              <ordinal>4</ordinal>
+              <family>number_trips_and_duration_by_week_membership_biketype.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[number_trips_and_duration_by_week_membership_biketype.csv_5082848D87E9472989B7B45CA01558B1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>day_of_week</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[day_of_week]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>day_of_week</remote-alias>
+              <ordinal>5</ordinal>
+              <family>number_trips_and_duration_by_week_membership_biketype.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[number_trips_and_duration_by_week_membership_biketype.csv_5082848D87E9472989B7B45CA01558B1]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:rideable_type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;classic_bike&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;electric_scooter&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;electric_bike&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:member_casual:nk]' type='palette'>
+            <map to='#6388b4'>
+              <bucket>&quot;member&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;casual&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:day_of_week:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Friday   &quot;</bucket>
+            <bucket>&quot;Monday   &quot;</bucket>
+            <bucket>&quot;Saturday &quot;</bucket>
+            <bucket>&quot;Sunday   &quot;</bucket>
+            <bucket>&quot;Thursday &quot;</bucket>
+            <bucket>&quot;Tuesday  &quot;</bucket>
+            <bucket>&quot;Wednesday&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <object-graph>
+        <objects>
+          <object caption='number_trips_and_duration_by_week_membership_biketype.csv' id='number_trips_and_duration_by_week_membership_biketype.csv_5082848D87E9472989B7B45CA01558B1'>
+            <properties context=''>
+              <relation connection='textscan.1n1g04j0amjoo017vxm9x0wgsjtb' name='number_trips_and_duration_by_week_membership_biketype.csv' table='[number_trips_and_duration_by_week_membership_biketype#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='member_casual' ordinal='0' />
+                  <column datatype='string' name='rideable_type' ordinal='1' />
+                  <column datatype='integer' name='num_rides' ordinal='2' />
+                  <column datatype='real' name='avg_trip_duration' ordinal='3' />
+                  <column datatype='integer' name='extract' ordinal='4' />
+                  <column datatype='string' name='day_of_week' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='rides_by_month' inline='true' name='federated.0q7f44212r707g1gfy8yx1wxf2h2' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='rides_by_month' name='textscan.0b03qan0ud2mk51flm0do0u6t5w7'>
+            <connection class='textscan' directory='/Users/reedw.solomon/Documents/Trip Data for Bike Share Case Study' filename='rides_by_month.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0b03qan0ud2mk51flm0do0u6t5w7' name='rides_by_month.csv' table='[rides_by_month#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='month' ordinal='0' />
+            <column datatype='integer' name='num_rides' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[rides_by_month.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[rides_by_month.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[rides_by_month.csv_17270249F2F34687B35DDE48358FB20F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_rides</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_rides]</local-name>
+            <parent-name>[rides_by_month.csv]</parent-name>
+            <remote-alias>num_rides</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[rides_by_month.csv_17270249F2F34687B35DDE48358FB20F]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='rides_by_month.csv' datatype='table' name='[__tableau_internal_object_id__].[rides_by_month.csv_17270249F2F34687B35DDE48358FB20F]' role='measure' type='quantitative' />
+      <column caption='Month' datatype='string' name='[month]' role='dimension' type='nominal' />
+      <column caption='Num Rides' datatype='integer' name='[num_rides]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/tableau-temp/#TableauTemp_1fdij6g0mklxua150wzgf1gt6984.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/18/2025 05:56:50 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>month</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month</remote-alias>
+              <ordinal>0</ordinal>
+              <family>rides_by_month.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_rides</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_rides]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>num_rides</remote-alias>
+              <ordinal>1</ordinal>
+              <family>rides_by_month.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='rides_by_month.csv' id='rides_by_month.csv_17270249F2F34687B35DDE48358FB20F'>
+            <properties context=''>
+              <relation connection='textscan.0b03qan0ud2mk51flm0do0u6t5w7' name='rides_by_month.csv' table='[rides_by_month#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='month' ordinal='0' />
+                  <column datatype='integer' name='num_rides' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='number_trips_and_distance_by_membership_direction' inline='true' name='federated.0jrse4211wlqnm1ehtcaa1xwhvqo' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='number_trips_and_distance_by_membership_direction' name='textscan.18btbm708ztojo158epsk171utpr'>
+            <connection class='textscan' directory='/Users/reedw.solomon/Documents/Trip Data for Bike Share Case Study' filename='number_trips_and_distance_by_membership_direction.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.18btbm708ztojo158epsk171utpr' name='number_trips_and_distance_by_membership_direction.csv' table='[number_trips_and_distance_by_membership_direction#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='member_casual' ordinal='0' />
+            <column datatype='string' name='trip_direction' ordinal='1' />
+            <column datatype='integer' name='num_trips' ordinal='2' />
+            <column datatype='real' name='avg_abs_distance' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[number_trips_and_distance_by_membership_direction.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>member_casual</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[member_casual]</local-name>
+            <parent-name>[number_trips_and_distance_by_membership_direction.csv]</parent-name>
+            <remote-alias>member_casual</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[number_trips_and_distance_by_membership_direction.csv_DA12500D57BF43B5825C3CD161838311]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trip_direction</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[trip_direction]</local-name>
+            <parent-name>[number_trips_and_distance_by_membership_direction.csv]</parent-name>
+            <remote-alias>trip_direction</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[number_trips_and_distance_by_membership_direction.csv_DA12500D57BF43B5825C3CD161838311]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_trips</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_trips]</local-name>
+            <parent-name>[number_trips_and_distance_by_membership_direction.csv]</parent-name>
+            <remote-alias>num_trips</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[number_trips_and_distance_by_membership_direction.csv_DA12500D57BF43B5825C3CD161838311]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_abs_distance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_abs_distance]</local-name>
+            <parent-name>[number_trips_and_distance_by_membership_direction.csv]</parent-name>
+            <remote-alias>avg_abs_distance</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[number_trips_and_distance_by_membership_direction.csv_DA12500D57BF43B5825C3CD161838311]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='number_trips_and_distance_by_membership_direction.csv' datatype='table' name='[__tableau_internal_object_id__].[number_trips_and_distance_by_membership_direction.csv_DA12500D57BF43B5825C3CD161838311]' role='measure' type='quantitative' />
+      <column caption='Avg Abs Distance' datatype='real' name='[avg_abs_distance]' role='measure' type='quantitative' />
+      <column caption='Member Casual' datatype='string' name='[member_casual]' role='dimension' type='nominal' />
+      <column caption='Num Trips' datatype='integer' name='[num_trips]' role='measure' type='quantitative' />
+      <column caption='Trip Direction' datatype='string' name='[trip_direction]' role='dimension' type='nominal' />
+      <column-instance column='[__tableau_internal_object_id__].[number_trips_and_distance_by_membership_direction.csv_DA12500D57BF43B5825C3CD161838311]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:number_trips_and_distance_by_membership_direction.csv_DA12500D57BF43B5825C3CD161838311:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[avg_abs_distance]' derivation='Min' name='[min:avg_abs_distance:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[num_trips]' derivation='Min' name='[min:num_trips:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[member_casual]' derivation='None' name='[none:member_casual:nk]' pivot='key' type='nominal' />
+      <column-instance column='[avg_abs_distance]' derivation='Sum' name='[sum:avg_abs_distance:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[num_trips]' derivation='Sum' name='[sum:num_trips:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/tableau-temp 1/#TableauTemp_1qxx0li0dwku5u189mcmi09ogtnv.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/18/2025 08:18:44 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>member_casual</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[member_casual]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>member_casual</remote-alias>
+              <ordinal>0</ordinal>
+              <family>number_trips_and_distance_by_membership_direction.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[number_trips_and_distance_by_membership_direction.csv_DA12500D57BF43B5825C3CD161838311]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>trip_direction</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[trip_direction]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>trip_direction</remote-alias>
+              <ordinal>1</ordinal>
+              <family>number_trips_and_distance_by_membership_direction.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[number_trips_and_distance_by_membership_direction.csv_DA12500D57BF43B5825C3CD161838311]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_trips</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_trips]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>num_trips</remote-alias>
+              <ordinal>2</ordinal>
+              <family>number_trips_and_distance_by_membership_direction.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[number_trips_and_distance_by_membership_direction.csv_DA12500D57BF43B5825C3CD161838311]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_abs_distance</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_abs_distance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_abs_distance</remote-alias>
+              <ordinal>3</ordinal>
+              <family>number_trips_and_distance_by_membership_direction.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[number_trips_and_distance_by_membership_direction.csv_DA12500D57BF43B5825C3CD161838311]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:member_casual:nk]' type='palette'>
+            <map to='#76b7b2'>
+              <bucket>&quot;casual&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;member&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[min:avg_abs_distance:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[sum:avg_abs_distance:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[__tableau_internal_object_id__].[cnt:number_trips_and_distance_by_membership_direction.csv_DA12500D57BF43B5825C3CD161838311:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[min:num_trips:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[sum:num_trips:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='number_trips_and_distance_by_membership_direction.csv' id='number_trips_and_distance_by_membership_direction.csv_DA12500D57BF43B5825C3CD161838311'>
+            <properties context=''>
+              <relation connection='textscan.18btbm708ztojo158epsk171utpr' name='number_trips_and_distance_by_membership_direction.csv' table='[number_trips_and_distance_by_membership_direction#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='member_casual' ordinal='0' />
+                  <column datatype='string' name='trip_direction' ordinal='1' />
+                  <column datatype='integer' name='num_trips' ordinal='2' />
+                  <column datatype='real' name='avg_abs_distance' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Duration by Month'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='number_trips_and_duration_by_membership_biketype_month' name='federated.07588te0dwnniz1axndlt0dwgj6k' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07588te0dwnniz1axndlt0dwgj6k'>
+            <column-instance column='[avg_trip_duration]' derivation='Avg' name='[avg:avg_trip_duration:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Avg Trip Duration' datatype='real' name='[avg_trip_duration]' role='dimension' type='quantitative' />
+            <column-instance column='[month_num]' derivation='Min' name='[min:month_num:qk]' pivot='key' type='quantitative' />
+            <column caption='Month' datatype='string' name='[month]' role='dimension' type='nominal' />
+            <column caption='Month Num' datatype='integer' name='[month_num]' role='dimension' type='quantitative' />
+            <column-instance column='[month]' derivation='None' name='[none:month:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:month:nk]' direction='ASC' using='[federated.07588te0dwnniz1axndlt0dwgj6k].[min:month_num:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='139' />
+            <format attr='height' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:month:nk]' value='23' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <size column='[federated.07588te0dwnniz1axndlt0dwgj6k].[avg:avg_trip_duration:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#69aaa5' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.07588te0dwnniz1axndlt0dwgj6k].[none:month:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{2F83E265-F836-49F2-9283-F7BBD8D76EF1}' />
+    </worksheet>
+    <worksheet name='Duration by Weekday'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Trip Duration by Weekday</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='number_trips_and_duration_by_week_membership_biketype' name='federated.1vk29s408zmo5q12vohxa1v2fv5m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vk29s408zmo5q12vohxa1v2fv5m'>
+            <column-instance column='[avg_trip_duration]' derivation='Avg' name='[avg:avg_trip_duration:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Trip Duration' datatype='real' datatype-customized='true' name='[avg_trip_duration]' role='dimension' type='quantitative' />
+            <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+            <column caption='Extract' datatype='integer' name='[extract]' role='measure' type='quantitative' />
+            <column-instance column='[extract]' derivation='Min' name='[min:extract:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[day_of_week]' derivation='None' name='[none:day_of_week:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:day_of_week:nk]' direction='ASC' using='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[min:extract:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='160' />
+            <format attr='height' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:day_of_week:nk]' value='40' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:day_of_week:nk]' value='68' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <size column='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[avg:avg_trip_duration:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#69aaa5' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:day_of_week:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{38C018FB-A485-48DD-9B7A-90EAFF635391}' />
+    </worksheet>
+    <worksheet name='Ride Time by Month+'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average Trip Duration&#10;</run>
+            <run fontsize='10'>in minutes</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='number_trips_and_duration_by_membership_biketype_month' name='federated.07588te0dwnniz1axndlt0dwgj6k' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07588te0dwnniz1axndlt0dwgj6k'>
+            <column aggregation='Sum' caption='Avg Trip Duration' datatype='real' name='[avg_trip_duration]' role='dimension' type='quantitative' />
+            <column caption='Member Casual' datatype='string' name='[member_casual]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;casual&quot;' value='Casual' />
+                <alias key='&quot;member&quot;' value='Subscription Member' />
+              </aliases>
+            </column>
+            <column-instance column='[month_num]' derivation='Min' name='[min:month_num:qk]' pivot='key' type='quantitative' />
+            <column caption='Month' datatype='string' name='[month]' role='dimension' type='nominal' />
+            <column caption='Month Num' datatype='integer' name='[month_num]' role='dimension' type='quantitative' />
+            <column-instance column='[avg_trip_duration]' derivation='None' name='[none:avg_trip_duration:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[member_casual]' derivation='None' name='[none:member_casual:nk]' pivot='key' type='nominal' />
+            <column-instance column='[month]' derivation='None' name='[none:month:nk]' pivot='key' type='nominal' />
+            <column-instance column='[rideable_type]' derivation='None' name='[none:rideable_type:nk]' pivot='key' type='nominal' />
+            <column caption='Rideable Type' datatype='string' name='[rideable_type]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;classic_bike&quot;' value='Classic Bike' />
+                <alias key='&quot;electric_bike&quot;' value='Electric Bike' />
+                <alias key='&quot;electric_scooter&quot;' value='Electric Scooter' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <computed-sort column='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:month:nk]' direction='ASC' using='[federated.07588te0dwnniz1axndlt0dwgj6k].[min:month_num:qk]' />
+          <filter class='categorical' column='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:rideable_type:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:rideable_type:nk]' />
+              <groupfilter function='member' level='[none:rideable_type:nk]' member='&quot;electric_scooter&quot;' />
+            </groupfilter>
+          </filter>
+          <hide-sort-controls />
+          <slices>
+            <column>[federated.07588te0dwnniz1axndlt0dwgj6k].[none:rideable_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:avg_trip_duration:qk]' value='24' />
+            <format attr='title' class='0' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:avg_trip_duration:qk]' scope='rows' value='' />
+            <encoding attr='space' class='0' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:avg_trip_duration:qk]' field-type='quantitative' max='45.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+            <format attr='height' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:month:nk]' value='75' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:month:nk]' value='25' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:member_casual:nk]' value='10' />
+            <format attr='width' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:rideable_type:nk]' value='10' />
+            <format attr='height-header' value='20' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='vertical-align' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:rideable_type:nk]' value='top' />
+            <format attr='text-orientation' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:avg_trip_duration:qk]' value='0' />
+            <format attr='text-orientation' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:month:nk]' value='-90' />
+            <format attr='display' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:rideable_type:nk]' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:member_casual:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='300' />
+                <format attr='maxwidth' value='300' />
+                <format attr='minheight' value='170' />
+                <format attr='maxheight' value='170' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.07588te0dwnniz1axndlt0dwgj6k].[none:rideable_type:nk] * [federated.07588te0dwnniz1axndlt0dwgj6k].[none:avg_trip_duration:qk])</rows>
+        <cols>[federated.07588te0dwnniz1axndlt0dwgj6k].[none:month:nk]</cols>
+      </table>
+      <simple-id uuid='{A66E4209-3F12-4ECB-BFC3-27BAE8F17D7C}' />
+    </worksheet>
+    <worksheet name='Ride Time by Weekday+'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='number_trips_and_duration_by_week_membership_biketype' name='federated.1vk29s408zmo5q12vohxa1v2fv5m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vk29s408zmo5q12vohxa1v2fv5m'>
+            <column caption='Avg Trip Duration' datatype='real' datatype-customized='true' name='[avg_trip_duration]' role='dimension' type='quantitative' />
+            <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+            <column caption='Extract' datatype='integer' name='[extract]' role='measure' type='quantitative' />
+            <column caption='Member Casual' datatype='string' name='[member_casual]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;casual&quot;' value='Casual' />
+                <alias key='&quot;member&quot;' value='Member' />
+              </aliases>
+            </column>
+            <column-instance column='[extract]' derivation='Min' name='[min:extract:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_trip_duration]' derivation='None' name='[none:avg_trip_duration:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[day_of_week]' derivation='None' name='[none:day_of_week:nk]' pivot='key' type='nominal' />
+            <column-instance column='[member_casual]' derivation='None' name='[none:member_casual:nk]' pivot='key' type='nominal' />
+            <column-instance column='[rideable_type]' derivation='None' name='[none:rideable_type:nk]' pivot='key' type='nominal' />
+            <column caption='Rideable Type' datatype='string' name='[rideable_type]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;classic_bike&quot;' value='Classic Bike' />
+                <alias key='&quot;electric_bike&quot;' value='Electric Bike' />
+                <alias key='&quot;electric_scooter&quot;' value='Electric Scooter' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <computed-sort column='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:day_of_week:nk]' direction='ASC' using='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[min:extract:qk]' />
+          <filter class='categorical' column='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:rideable_type:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:rideable_type:nk]' />
+              <groupfilter function='member' level='[none:rideable_type:nk]' member='&quot;electric_scooter&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:rideable_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:day_of_week:nk]' value='75' />
+            <format attr='width' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:avg_trip_duration:qk]' value='28' />
+            <encoding attr='space' class='0' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:avg_trip_duration:qk]' field-type='quantitative' max='45.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:member_casual:nk]' value='10' />
+            <format attr='width' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:rideable_type:nk]' value='12' />
+            <format attr='background-color' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:rideable_type:nk]' value='#e2e6f0' />
+            <format attr='background-color' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:avg_trip_duration:qk]' value='#f9f8f7' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:member_casual:nk]' value='-90' />
+            <format attr='text-orientation' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:rideable_type:nk]' value='-90' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+            <format attr='background-color' data-class='subtotal' scope='rows' value='#00000000' />
+            <format attr='background-color' data-class='total' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+            <format attr='band-level' scope='rows' value='0' />
+            <format attr='band-size' scope='cols' value='1' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:member_casual:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:rideable_type:nk] * [federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:avg_trip_duration:qk])</rows>
+        <cols>[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:day_of_week:nk]</cols>
+      </table>
+      <simple-id uuid='{965B7CD4-949A-4537-8D8D-F9AD286D296F}' />
+    </worksheet>
+    <worksheet name='Rides by Month'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Total Rides by Month</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='number_trips_and_duration_by_membership_biketype_month' name='federated.07588te0dwnniz1axndlt0dwgj6k' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07588te0dwnniz1axndlt0dwgj6k'>
+            <column-instance column='[month_num]' derivation='Min' name='[min:month_num:qk]' pivot='key' type='quantitative' />
+            <column caption='Month' datatype='string' name='[month]' role='dimension' type='nominal' />
+            <column caption='Month Num' datatype='integer' name='[month_num]' role='dimension' type='quantitative' />
+            <column-instance column='[month]' derivation='None' name='[none:month:nk]' pivot='key' type='nominal' />
+            <column caption='Num Rides' datatype='integer' name='[num_rides]' role='measure' type='quantitative' />
+            <column-instance column='[num_rides]' derivation='Sum' name='[sum:num_rides:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:month:nk]' direction='ASC' using='[federated.07588te0dwnniz1axndlt0dwgj6k].[min:month_num:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='139' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <size column='[federated.07588te0dwnniz1axndlt0dwgj6k].[sum:num_rides:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.07588te0dwnniz1axndlt0dwgj6k].[none:month:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{44D666FA-03DA-4034-B3E0-9AA54E2A62CB}' />
+    </worksheet>
+    <worksheet name='Rides by Month+'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='number_trips_and_duration_by_membership_biketype_month' name='federated.07588te0dwnniz1axndlt0dwgj6k' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07588te0dwnniz1axndlt0dwgj6k'>
+            <column caption='Member Casual' datatype='string' name='[member_casual]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;casual&quot;' value='Casual' />
+                <alias key='&quot;member&quot;' value='Subscription Member' />
+              </aliases>
+            </column>
+            <column-instance column='[month_num]' derivation='Min' name='[min:month_num:qk]' pivot='key' type='quantitative' />
+            <column caption='Month' datatype='string' name='[month]' role='dimension' type='nominal' />
+            <column caption='Month Num' datatype='integer' name='[month_num]' role='dimension' type='quantitative' />
+            <column-instance column='[member_casual]' derivation='None' name='[none:member_casual:nk]' pivot='key' type='nominal' />
+            <column-instance column='[month]' derivation='None' name='[none:month:nk]' pivot='key' type='nominal' />
+            <column-instance column='[rideable_type]' derivation='None' name='[none:rideable_type:nk]' pivot='key' type='nominal' />
+            <column caption='Num Rides' datatype='integer' name='[num_rides]' role='measure' type='quantitative' />
+            <column caption='Rideable Type' datatype='string' name='[rideable_type]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;classic_bike&quot;' value='Classic Bike' />
+                <alias key='&quot;electric_bike&quot;' value='Electric Bike' />
+                <alias key='&quot;electric_scooter&quot;' value='Electric Scooter' />
+              </aliases>
+            </column>
+            <column-instance column='[num_rides]' derivation='Sum' name='[sum:num_rides:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:month:nk]' direction='ASC' using='[federated.07588te0dwnniz1axndlt0dwgj6k].[min:month_num:qk]' />
+          <filter class='categorical' column='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:rideable_type:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:rideable_type:nk]' member='&quot;classic_bike&quot;' />
+              <groupfilter function='member' level='[none:rideable_type:nk]' member='&quot;electric_bike&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.07588te0dwnniz1axndlt0dwgj6k].[none:rideable_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[sum:num_rides:qk]' value='44' />
+            <encoding attr='space' class='0' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[sum:num_rides:qk]' field-type='quantitative' max='320000' min='0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:month:nk]' value='61' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:member_casual:nk]' value='48' />
+            <format attr='width' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:rideable_type:nk]' value='44' />
+          </style-rule>
+          <style-rule element='field-labels-spanner'>
+            <format attr='background-color' scope='cols' value='#efebe8' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:member_casual:nk]' value='0' />
+            <format attr='display' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:rideable_type:nk]' value='false' />
+            <format attr='text-orientation' field='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:month:nk]' value='-90' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:member_casual:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.07588te0dwnniz1axndlt0dwgj6k].[none:rideable_type:nk] * [federated.07588te0dwnniz1axndlt0dwgj6k].[sum:num_rides:qk])</rows>
+        <cols>[federated.07588te0dwnniz1axndlt0dwgj6k].[none:month:nk]</cols>
+      </table>
+      <simple-id uuid='{454F748B-AB5A-4EF7-B2A5-20F6D95EE732}' />
+    </worksheet>
+    <worksheet name='Rides by Weekday'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Total Rides By Day of Week</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='number_trips_and_duration_by_week_membership_biketype' name='federated.1vk29s408zmo5q12vohxa1v2fv5m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vk29s408zmo5q12vohxa1v2fv5m'>
+            <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+            <column caption='Extract' datatype='integer' name='[extract]' role='measure' type='quantitative' />
+            <column-instance column='[day_of_week]' derivation='None' name='[none:day_of_week:nk]' pivot='key' type='nominal' />
+            <column caption='Num Rides' datatype='integer' name='[num_rides]' role='measure' type='quantitative' />
+            <column-instance column='[extract]' derivation='Sum' name='[sum:extract:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[num_rides]' derivation='Sum' name='[sum:num_rides:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:day_of_week:nk]' direction='ASC' using='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[sum:extract:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='205' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <size column='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[sum:num_rides:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:day_of_week:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{457323B0-2F13-464F-9D29-6474FE6E2239}' />
+    </worksheet>
+    <worksheet name='Rides by Weekday+'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number Of Rides  by ride type</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='number_trips_and_duration_by_week_membership_biketype' name='federated.1vk29s408zmo5q12vohxa1v2fv5m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vk29s408zmo5q12vohxa1v2fv5m'>
+            <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+            <column caption='Extract' datatype='integer' name='[extract]' role='measure' type='quantitative' />
+            <column caption='Member Casual' datatype='string' name='[member_casual]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;casual&quot;' value='Casual' />
+                <alias key='&quot;member&quot;' value='Member' />
+              </aliases>
+            </column>
+            <column-instance column='[day_of_week]' derivation='None' name='[none:day_of_week:nk]' pivot='key' type='nominal' />
+            <column-instance column='[member_casual]' derivation='None' name='[none:member_casual:nk]' pivot='key' type='nominal' />
+            <column-instance column='[rideable_type]' derivation='None' name='[none:rideable_type:nk]' pivot='key' type='nominal' />
+            <column caption='Num Rides' datatype='integer' name='[num_rides]' role='measure' type='quantitative' />
+            <column caption='Rideable Type' datatype='string' name='[rideable_type]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;classic_bike&quot;' value='Classic Bike' />
+                <alias key='&quot;electric_bike&quot;' value='Electric Bike' />
+                <alias key='&quot;electric_scooter&quot;' value='Electric Scooter' />
+              </aliases>
+            </column>
+            <column-instance column='[extract]' derivation='Sum' name='[sum:extract:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[num_rides]' derivation='Sum' name='[sum:num_rides:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:day_of_week:nk]' direction='ASC' using='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[sum:extract:qk]' />
+          <filter class='categorical' column='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:rideable_type:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:rideable_type:nk]' member='&quot;classic_bike&quot;' />
+              <groupfilter function='member' level='[none:rideable_type:nk]' member='&quot;electric_bike&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:rideable_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[sum:num_rides:qk]' value='56' />
+            <encoding attr='space' class='0' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[sum:num_rides:qk]' field-type='quantitative' max='320000' min='0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='20' />
+            <format attr='cell-h' value='20' />
+            <format attr='cell' value='20' />
+            <format attr='cell-q' value='100' />
+            <format attr='font-size' data-class='total' value='9' />
+            <format attr='width' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:day_of_week:nk]' value='50' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height-header' value='17' />
+            <format attr='width' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:member_casual:nk]' value='52' />
+            <format attr='width' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:rideable_type:nk]' value='28' />
+          </style-rule>
+          <style-rule element='field-labels-spanner'>
+            <format attr='background-color' scope='cols' value='#f5f1f0' />
+            <format attr='background-color' scope='rows' value='#efebe8' />
+            <format attr='font-family' scope='rows' value='Tableau Light' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:rideable_type:nk]' value='false' />
+            <format attr='text-orientation' field='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:day_of_week:nk]' value='-90' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='font-family' value='Tableau Book' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:member_casual:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:rideable_type:nk] * [federated.1vk29s408zmo5q12vohxa1v2fv5m].[sum:num_rides:qk])</rows>
+        <cols>[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:day_of_week:nk]</cols>
+      </table>
+      <simple-id uuid='{1CE53DA1-5B8F-4D0B-B442-DB2D4CB1AF97}' />
+    </worksheet>
+    <worksheet name='Trips &amp; Distance by Direction'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of Trips by direction</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='number_trips_and_distance_by_membership_direction' name='federated.0jrse4211wlqnm1ehtcaa1xwhvqo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jrse4211wlqnm1ehtcaa1xwhvqo'>
+            <column caption='Avg Abs Distance' datatype='real' name='[avg_abs_distance]' role='measure' type='quantitative' />
+            <column caption='Member Casual' datatype='string' name='[member_casual]' role='dimension' type='nominal' />
+            <column-instance column='[avg_abs_distance]' derivation='Min' name='[min:avg_abs_distance:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[num_trips]' derivation='Min' name='[min:num_trips:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[member_casual]' derivation='None' name='[none:member_casual:nk]' pivot='key' type='nominal' />
+            <column-instance column='[trip_direction]' derivation='None' name='[none:trip_direction:nk]' pivot='key' type='nominal' />
+            <column caption='Num Trips' datatype='integer' name='[num_trips]' role='measure' type='quantitative' />
+            <column caption='Trip Direction' datatype='string' name='[trip_direction]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[none:trip_direction:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:trip_direction:nk]' member='&quot;East&quot;' />
+              <groupfilter function='member' level='[none:trip_direction:nk]' member='&quot;North&quot;' />
+              <groupfilter function='member' level='[none:trip_direction:nk]' member='&quot;Northeast&quot;' />
+              <groupfilter function='member' level='[none:trip_direction:nk]' member='&quot;Northwest&quot;' />
+              <groupfilter function='member' level='[none:trip_direction:nk]' member='&quot;South&quot;' />
+              <groupfilter function='member' level='[none:trip_direction:nk]' member='&quot;Southeast&quot;' />
+              <groupfilter function='member' level='[none:trip_direction:nk]' member='&quot;Southwest&quot;' />
+              <groupfilter function='member' level='[none:trip_direction:nk]' member='&quot;West&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[none:trip_direction:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Southwest&quot;</bucket>
+              <bucket>&quot;West&quot;</bucket>
+              <bucket>&quot;Northwest&quot;</bucket>
+              <bucket>&quot;North&quot;</bucket>
+              <bucket>&quot;Northeast&quot;</bucket>
+              <bucket>&quot;East&quot;</bucket>
+              <bucket>&quot;Southeast&quot;</bucket>
+              <bucket>&quot;South&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[none:trip_direction:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[none:member_casual:nk]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[min:avg_abs_distance:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[none:member_casual:nk]' />
+            </encodings>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[min:num_trips:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[none:member_casual:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[min:avg_abs_distance:qk] + [federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[min:num_trips:qk])</rows>
+        <cols>([federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[none:trip_direction:nk] / [federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[none:member_casual:nk])</cols>
+      </table>
+      <simple-id uuid='{31BBC932-3FDB-4586-A00A-11776372C6F3}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Duration Breakdown'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone h='100000' id='11' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='92857' id='3' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='49999' x='0' y='7143'>
+            <zone h='92907' id='7' name='Ride Time by Weekday+' show-title='false' w='50000' x='0' y='7093'>
+              <layout-cache minheight='301' type-h='scalable' type-w='fixed' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='92857' id='5' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='50001' x='49999' y='7143'>
+            <zone fixed-size='472' h='92907' id='10' is-fixed='true' name='Ride Time by Month+' show-title='false' w='50000' x='50000' y='7093'>
+              <layout-cache has-max-size-h='true' maxheight='427' minheight='427' type-h='scalable' type-w='fixed' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='7143' id='6' param='horz' type-v2='layout-flow' w='100000' x='0' y='0'>
+            <zone forceUpdate='true' h='7143' id='9' type-v2='text' w='100000' x='0' y='0'>
+              <formatted-text>
+                <run fontsize='15'>Ride Duration by Weekday, Month (In minutes)</run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+        </zone>
+        <zone h='10714' id='8' name='Ride Time by Weekday+' pane-specification-id='0' param='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:member_casual:nk]' show-title='false' type-v2='color' w='19761' x='34412' y='53214' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='750' minheight='750' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='21' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98140' id='20' param='vert' type-v2='layout-flow' w='97538' x='1231' y='930'>
+                <zone forceUpdate='true' h='7143' id='9' type-v2='text' w='100000' x='0' y='0'>
+                  <formatted-text>
+                    <run fontsize='15'>Ride Duration by Weekday, Month (In minutes)</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='92907' id='7' is-fixed='true' name='Ride Time by Weekday+' show-title='false' w='50000' x='0' y='7093'>
+                  <layout-cache minheight='301' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10714' id='8' name='Ride Time by Weekday+' pane-specification-id='0' param='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:member_casual:nk]' show-title='false' type-v2='color' w='19761' x='34412' y='53214'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='92907' id='10' is-fixed='true' name='Ride Time by Month+' show-title='false' w='50000' x='50000' y='7093'>
+                  <layout-cache has-max-size-h='true' maxheight='427' minheight='427' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F814F583-EE99-41B0-9279-6F659C7A9E5B}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Number Rides Breakdown'>
+      <style />
+      <size maxheight='600' maxwidth='650' minheight='100' minwidth='420' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='5' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='94107' id='3' name='Rides by Weekday+' show-title='false' w='49995' x='0' y='5893'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='94107' id='10' name='Rides by Month+' show-title='false' w='50005' x='49995' y='5893'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='5893' id='19' type-v2='text' w='100000' x='0' y='0'>
+            <formatted-text>
+              <run fontsize='15'>Number of Rides by Weekday, Month</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone friendly-name='Color legend' h='8840' id='9' name='Rides by Weekday+' pane-specification-id='0' param='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:member_casual:nk]' show-title='false' type-v2='color' w='18605' x='30388' y='39595' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='750' minheight='750' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='29' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97334' id='28' param='vert' type-v2='layout-flow' w='97538' x='1231' y='1333'>
+                <zone forceUpdate='true' h='5893' id='19' type-v2='text' w='100000' x='0' y='0'>
+                  <formatted-text>
+                    <run fontsize='15'>Number of Rides by Weekday, Month</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='94107' id='3' is-fixed='true' name='Rides by Weekday+' show-title='false' w='49995' x='0' y='5893'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone friendly-name='Color legend' h='8840' id='9' name='Rides by Weekday+' pane-specification-id='0' param='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:member_casual:nk]' show-title='false' type-v2='color' w='18605' x='30388' y='39595'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='94107' id='10' is-fixed='true' name='Rides by Month+' show-title='false' w='50005' x='49995' y='5893'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{0FF8DBC8-BC47-4BDA-B750-25AB007B7694}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Ride Time by Month or Weekday'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='89662' id='7' param='horz' type-v2='layout-flow' w='97538' x='1231' y='9408'>
+            <zone h='89662' id='5' type-v2='layout-basic' w='97538' x='1231' y='9408'>
+              <zone h='89662' id='3' name='Duration by Month' show-title='false' w='48769' x='1231' y='9408'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='89662' id='8' name='Duration by Weekday' show-title='false' w='48769' x='50000' y='9408'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='8478' id='9' type-v2='text' w='97538' x='1231' y='930'>
+            <formatted-text>
+              <run fontsize='15'>Ride Time by Weekday, Month</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='19' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98140' id='18' param='vert' type-v2='layout-flow' w='97538' x='1231' y='930'>
+                <zone forceUpdate='true' h='8478' id='9' type-v2='text' w='97538' x='1231' y='930'>
+                  <formatted-text>
+                    <run fontsize='15'>Ride Time by Weekday, Month</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='89662' id='3' is-fixed='true' name='Duration by Month' show-title='false' w='48769' x='1231' y='9408'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='89662' id='8' is-fixed='true' name='Duration by Weekday' show-title='false' w='48769' x='50000' y='9408'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{CBBFBBC6-A7CA-4673-8F27-FF44975BFA53}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Rides by Month or Weekday'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone h='89464' id='5' type-v2='layout-basic' w='97278' x='1361' y='9107'>
+          <zone h='89464' id='3' name='Rides by Month' show-title='false' w='45238' x='1361' y='9107'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='89464' id='18' name='Rides by Weekday' show-title='false' w='52040' x='46599' y='9107'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='7678' id='23' type-v2='text' w='97278' x='1361' y='1429'>
+          <formatted-text>
+            <run fontsize='15'>Number of Rides by Month, Weekday</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='4' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='33' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98140' id='32' param='vert' type-v2='layout-flow' w='97538' x='1231' y='930'>
+                <zone h='7678' id='23' type-v2='text' w='97278' x='1361' y='1429'>
+                  <formatted-text>
+                    <run fontsize='15'>Number of Rides by Month, Weekday</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='89464' id='3' is-fixed='true' name='Rides by Month' show-title='false' w='45238' x='1361' y='9107'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='89464' id='18' is-fixed='true' name='Rides by Weekday' show-title='false' w='52040' x='46599' y='9107'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{E2F2365A-53AB-474B-8C87-3A83099538D0}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='93'>
+    <window class='worksheet' name='Rides by Month'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.07588te0dwnniz1axndlt0dwgj6k].[sum:num_rides:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{922751C5-1C6B-4956-AF78-B1E0877F8E7E}' />
+    </window>
+    <window class='worksheet' name='Rides by Weekday'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{085CE886-4142-45DA-9D18-4737E3E987B6}' />
+    </window>
+    <window class='worksheet' name='Duration by Month'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.07588te0dwnniz1axndlt0dwgj6k].[avg:avg_trip_duration:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{96B5F97B-5CD1-4914-BD93-8174FFD76A90}' />
+    </window>
+    <window class='worksheet' name='Duration by Weekday'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D5C1EC38-607D-4F80-AA32-04980FFCD05A}' />
+    </window>
+    <window class='worksheet' name='Rides by Month+'>
+      <cards>
+        <edge name='left'>
+          <strip size='100'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.07588te0dwnniz1axndlt0dwgj6k].[none:member_casual:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{747A405B-C8F3-41E5-BA60-9E2B59497114}' />
+    </window>
+    <window class='worksheet' name='Rides by Weekday+'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:member_casual:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D871132F-8A80-4B29-8E9C-A5F60110B87A}' />
+    </window>
+    <window class='worksheet' name='Ride Time by Month+'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1644551D-F866-4BC1-AC1F-98C7E064EB40}' />
+    </window>
+    <window class='worksheet' name='Ride Time by Weekday+'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1vk29s408zmo5q12vohxa1v2fv5m].[none:member_casual:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D516F679-6D49-476E-BBA6-965460976C37}' />
+    </window>
+    <window class='worksheet' name='Trips &amp; Distance by Direction'>
+      <cards>
+        <edge name='left'>
+          <strip size='140'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0jrse4211wlqnm1ehtcaa1xwhvqo].[none:member_casual:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{40013C24-C811-44EC-93AC-C7DDBCE27CC1}' />
+    </window>
+    <window class='dashboard' name='Rides by Month or Weekday'>
+      <viewpoints>
+        <viewpoint name='Rides by Month' />
+        <viewpoint name='Rides by Weekday' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{A924E835-A5B7-4B35-9CAA-B24846429583}' />
+    </window>
+    <window class='dashboard' name='Ride Time by Month or Weekday'>
+      <viewpoints>
+        <viewpoint name='Duration by Month' />
+        <viewpoint name='Duration by Weekday' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{777090AF-D49A-4F5E-9B65-71533F6D1308}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Number Rides Breakdown'>
+      <viewpoints>
+        <viewpoint name='Rides by Month+'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Rides by Weekday+'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='1' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{3EEA1F78-109E-4A5C-85CB-7AB1C8257489}' />
+    </window>
+    <window class='dashboard' name='Duration Breakdown'>
+      <viewpoints>
+        <viewpoint name='Ride Time by Month+'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Ride Time by Weekday+'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='1' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{6493AC6A-B57A-4D5A-9EF0-CBA15D48D700}' />
+    </window>
+  </windows>
+</workbook>
