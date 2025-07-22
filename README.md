@@ -28,6 +28,7 @@ In total, this repository contains:
 - My final report (final_report.md)
 - A detailed description of the steps taken to complete the project (Project_Description_and_Progression.md)
 - 2 SQL files containing the queries I used through PostgreSQL (Queries_Bike_Share_GDA.sql, final_analysis_query.sql)
+- A 1,000 row sample of the original table, to allow queries to be replicated (bikeshare_table_sample.csv)
 - A packaged Tableau workbook containing all the visualizations I used for this project (GDA Bike Sharing Dashboard v2 Packaged__10439.twbr)
 - A spreadsheet that organizes the relationships I found in the data (Bike Trips_ Useful Relationships.xlsx)
 - and this README file.
