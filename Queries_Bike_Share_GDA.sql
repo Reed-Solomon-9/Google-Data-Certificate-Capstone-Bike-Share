@@ -1,4 +1,4 @@
---Delete mistake version of table; create table with columns and character limits specified. 
+--Create table with columns and character limits specified. 
 
 DROP TABLE IF EXISTS bikeshare_06_24_to_05_25;
 CREATE TABLE bikeshare_06_24_to_05_25 (
@@ -812,9 +812,17 @@ week_num,
 hour,
 rideable_type
 
+--establish when earliest and latest ride happened
 SELECT 
 MIN(started_at) AS earliest_ride,
 MAX(started_at) AS latest_ride
 
 FROM bikeshare_06_24_to_05_25
+
+--Create 1,000 row sample of full dataset to load onto GitHub
+SELECT *
+
+FROM bikeshare_06_24_to_05_25
+
+LIMIT 1000
 
