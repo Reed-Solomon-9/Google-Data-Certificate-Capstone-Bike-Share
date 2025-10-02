@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Casual Riders Vs. Subscription Members: Differences in Behavior
 
 ## For Cyclistic bicycle sharing company, July 2025
@@ -57,9 +62,9 @@ I also attempted to load the entire table into Tableau to allow me to more easil
 
 With my relevant columns having been created, I made an overview table in Google Sheets to summarize all of the relationships I was able to measure. I highlighted significant relationships in red, and small but potentially useful relationships in a light pink. 
 
-<img width="1619" height="623" alt="Bike Trips Useful Relationships" src="https://github.com/user-attachments/assets/52147c50-2aac-4208-96d6-303e89f72b06" />
+<img width="900" height="346" alt="Bike Trips Useful Relationships" src="https://github.com/user-attachments/assets/52147c50-2aac-4208-96d6-303e89f72b06" />
 
-_(this table is also included in my repository as it may be too difficult to read in this format)_</br>
+_(this table is also included in my [repository](https://github.com/Reed-Solomon-9/Google-Data-Certificate-Capstone-Bike-Share) as it may be too difficult to read in this format)_</br>
 </br>
 This gave me a somewhat comprehensive look at what is in the dataset. In terms of completeness, the logical next step would be to analyze combinations of multiple qualitative columns, but that could require hundreds of separate queries and charts, and likely a lot of wasted time.
 
