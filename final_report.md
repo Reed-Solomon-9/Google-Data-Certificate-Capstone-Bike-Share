@@ -1,8 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
 # Casual Riders Vs. Subscription Members: Differences in Behavior
 
 ## For Cyclistic bicycle sharing company, July 2025
